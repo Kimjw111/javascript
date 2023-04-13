@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 2에서 9까지 중 하나를 입력 받아  2. 구구단을  3.페이지에 나타내어라
+        const ab = prompt('2에서 9중 입력하세요.')*1
+        const a = ab*1
+        const b = ab*2
+        const c = ab*3
+        const d = ab*4
+        const e = ab*5
+        const f = ab*6
+        const g = ab*7
+        const h = ab*8
+        const i = ab*9
+        document.write(`<h1>입력하신 숫자는 ${ab} 입니다.</h1>
+    <table><tr><td>X1은 ${a} 입니다.</td></tr>
+    <tr><td>X2는 ${b} 입니다.</td></tr>
+    <tr><td>X3은 ${c} 입니다.</td></tr>
+    <tr><td>X4는 ${d} 입니다.</td></tr>
+    <tr><td>X5는 ${e} 입니다.</td></tr>
+    <tr><td>X6은 ${f} 입니다.</td></tr>
+    <tr><td>X7은 ${g} 입니다.</td></tr>
+    <tr><td>X8은 ${h} 입니다.</td></tr>
+    <tr><td>X9는 ${i} 입니다.</td></tr></table>`)
+    </script>
+    <style>
+        table{border-collapse: collapse;
+            text-align: center;}
+        td{border: 1px solid black;}
+        tr:nth-child(2n){
+            background-color: rgba(247, 233, 39, 0.986);
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환율계산기</title>
+    <script>
+        const dollar = prompt('환전하고자 하는 달러를 입력해 주세요.','1')
+        const ex = 1350
+        const ex2 = 133.21
+        const ex3 = 6.87
+        const won = Number(dollar) * ex
+        const yen = Number(dollar) * ex2
+        const yuan = Number(dollar) * ex3
+        console.log(`환전하실 ${dollar}달러는 ${won}원 입니다.`)
+        document.write(`<table>
+                        <tr><th>입력하신 ${dollar}달러를 환전하면</th></tr>
+                        <tr><td>KRW : ${won}원</td></tr>
+                        <tr><td>JPY : ${yen}엔</td></tr>
+                        <tr><td>CNY : ${yuan}위안</td></tr></table>`)
+    </script>
+    <style>
+        table{border-collapse: collapse;}
+        th, td{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
