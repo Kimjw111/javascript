@@ -1,5 +1,4 @@
-let input = prompt();
-number = input;
+let number = prompt();
 let list = '';
     list += '<table class="a">';
     list += `<tr><th>증감연산자</th><th>설명</th><th>예)let number=${number}</th><th>순서</th></tr>`;
