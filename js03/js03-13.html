@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>거스름돈</title>
+    <script>
+        const input = prompt('거스름을 입력하세요.')*1
+        const a = Math.floor(input/50000)
+        const b = Math.floor((input%50000)/10000)
+        const c = Math.floor(input/50000/10000/5000)
+        const d = Math.floor(input/50000/10000/5000/1000)
+        const e = Math.floor(input/50000/10000/5000/1000/500)
+        const f = Math.floor(input/50000/10000/5000/1000/500/100)
+        const g = Math.floor(input/50000/10000/5000/1000/500/100/50)
+        const h = Math.floor(input/50000/10000/5000/1000/500/100/50/10)
+        document.write(`<h2>입력하신 <mark>${input}</mark>원을 거스름으로 분리하면</h2>
+    <table>
+        <tr>
+            <th>잔돈</th>
+            <th>개수</th>
+        </tr>
+        <tr>
+            <td class="a">5만원권</td>
+            <td class="b">${a}</td>
+        </tr>
+        <tr>
+            <td class="a">1만원권</td>
+            <td class="b">${b}</td>
+        </tr>
+        <tr>
+            <td class="a">5천원권</td>
+            <td class="b">${c}</td>
+        </tr>
+        <tr>
+            <td class="a">1천원권</td>
+            <td class="b">${d}</td>
+        </tr>
+        <tr>
+            <td class="a">5백원</td>
+            <td class="b">${e}</td>
+        </tr>
+        <tr>
+            <td class="a">1백원</td>
+            <td class="b">${f}</td>
+        </tr>
+        <tr>
+            <td class="a">50원</td>
+            <td class="b">${g}</td>
+        </tr>
+        <tr>
+            <td class="a">10원</td>
+            <td class="b">${h}</td>
+        </tr>
+    </table>`)
+    </script>
+    <style>
+        table{border-collapse: collapse;
+        text-align: center;}
+        th{background-color: bisque;}
+        th,td{border: 1px solid black;}
+        .a{background-color:aquamarine;}
+        .b{background-color: yellow;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
