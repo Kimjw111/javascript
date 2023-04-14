@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else 조건문</title>
+    <script>
+        // 학점을 입력받고 등급을 나눈다.
+        // 100 : A++ 입니다. 90<=X<100: A,80<=X<90: B, 70<=X<80: C, 60<=X<70: D, 60점 미만 : F
+        // 사용자로부터 입력을 받아서 Alert창과 콘솔 그리고 웹페이지에 학점을 표기하세요.
+        const score = prompt('점수를 입력하세요.')*1
+        if(score === 100){alert('A++ 입니다.');
+        console.log('A++');
+        document.write(`<table>
+                <tr><th>당신의 점수는?</th><th>당신의 학점은?</th></tr>
+                <tr><td>${score}</td><td>A++</td></tr></table>`)}
+        if(90 <= score && score < 100){alert('A 입니다.');
+        console.log('A');
+        document.write(`<table>
+                <tr><th>당신의 점수는?</th><th>당신의 학점은?</th></tr>
+                <tr><td>${score}</td><td>A</td></tr></table>`)}
+        if(80 <= score && score <90){alert('B 입니다.');
+        console.log('B');
+        document.write(`<table>
+                <tr><th>당신의 점수는?</th><th>당신의 학점은?</th></tr>
+                <tr><td>${score}</td><td>B</td></tr></table>`)}
+        if(70 <= score && score <80){alert('C 입니다.');
+        console.log('C');
+        document.write(`<table>
+                <tr><th>당신의 점수는?</th><th>당신의 학점은?</th></tr>
+                <tr><td>${score}</td><td>C</td></tr></table>`)}
+        if(60 <= score && score <70){alert('D 입니다.');
+        console.log('D');
+        document.write(`<table>
+                <tr><th>당신의 점수는?</th><th>당신의 학점은?</th></tr>
+                <tr><td>${score}</td><td>D</td></tr></table>`)}
+        if(score < 60){alert('F 입니다.');
+        console.log('F');
+        document.write(`<table>
+                <tr><th>당신의 점수는?</th><th>당신의 학점은?</th></tr>
+                <tr><td>${score}</td><td>F</td></tr></table>`)}
+    </script>
+    <style>
+        table{border-collapse: collapse;
+        text-align: center;}
+        th,td{border: 1px solid black;}
+        td{background-color: yellow;}
+    </style>
+</head>
+<body>
+   
+</body>
+</html>
