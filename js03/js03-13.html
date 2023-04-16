@@ -9,12 +9,12 @@
         const input = prompt('거스름을 입력하세요.')*1
         const a = Math.floor(input/50000)
         const b = Math.floor((input%50000)/10000)
-        const c = Math.floor(input/50000/10000/5000)
-        const d = Math.floor(input/50000/10000/5000/1000)
-        const e = Math.floor(input/50000/10000/5000/1000/500)
-        const f = Math.floor(input/50000/10000/5000/1000/500/100)
-        const g = Math.floor(input/50000/10000/5000/1000/500/100/50)
-        const h = Math.floor(input/50000/10000/5000/1000/500/100/50/10)
+        const c = Math.floor(((input%50000)%10000)/5000)
+        const d = Math.floor((((input%50000)%10000)%5000)/1000)
+        const e = Math.floor(((((input%50000)%10000)%5000)%1000)/500)
+        const f = Math.floor((((((input%50000)%10000)%5000)%1000)%500)/100)
+        const g = Math.floor(((((((input%50000)%10000)%5000)%1000)%500)%100)/50)
+        const h = Math.floor((((((((input%50000)%10000)%5000)%1000)%500)%100)%50)/10)
         document.write(`<h2>입력하신 <mark>${input}</mark>원을 거스름으로 분리하면</h2>
     <table>
         <tr>
