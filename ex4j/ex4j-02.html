@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤</title>
+    <script>
+        const ran = Math.floor(Math.random()*100)+1
+       // 10% 넘어가면 일반 5~10% 레어템 2~5% 유니크 2%미만 레전드아이템
+       // 일반 흰색, 레어 노란색, 유니크 초록, 레전드 금색
+       if (10 < ran){console.log('%c일반 아이템 당첨!!',"border:1px solid black;color:white;background:grey;margin:5px;font-size:30px;"); 
+       }
+       else if (5 <= ran && ran <=10){console.log('%c레어 아이템 당첨!!',"border:1px solid black;color:yellow;background:grey;margin:5px;font-size:30px;");
+        }
+       else if (2 <=ran && ran < 5){console.log('%c유니크 아이템 당첨!!',"border:1px solid black;color:green;background:white;margin:5px;font-size:30px;"); 
+       }
+       else if (ran < 2){console.log('%c레전드 아이템 당첨!!',"border:1px solid black;color:gold;background:white;margin:5px;font-size:30px;");
+        }
+    </script>
+
+</head>
+<body> 
+</body>
+</html>
