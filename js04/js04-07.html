@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*console.log에 50까지 증가할때
+        일반은 흰색
+        3의 배수 빨간색
+        5의 배수 초록색
+        둘이 만나면 파란색*/
+        for(let i=0;i<100;i++){if((i/5)%3==0){console.log(`%c${i}`,"color:blue;margin:5px;font-size:30px;")} 
+                            else if(i%5==0){console.log(`%c${i}`,"color:green;margin:5px;font-size:30px;")}
+                            else if(i%3==0){console.log(`%c${i}`,"color:red;margin:5px;font-size:30px;")}
+                            else{console.log(`%c${i}`,"color:white;background-color:black;margin:5px;font-size:30px;")}}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
