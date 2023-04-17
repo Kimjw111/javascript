@@ -10,8 +10,21 @@
         const fruits = ['딸기', '바나나', '사과', '수박', '배', '키위', '복숭아', '포도']
         const b = fruits.splice(fruits.indexOf(a),1)
         console.log(b)
-        document.write(fruits)
+        document.write(`<h2>${fruits}</h2>`)
     </script>
+    <style>
+        h2{
+            text-align: center;
+            font-size: 30px;
+            color: yellow;
+            background-color: blanchedalmond;
+            transition:transform 1s linear;
+              }
+        h2:hover{
+            color:aquamarine;
+            transform:rotate(-360deg);
+        }
+    </style>
 </head>
 <body>
     
