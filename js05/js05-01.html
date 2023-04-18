@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합구하기</title>
+    <script>
+        //1부터 20까지 수를 모두 더한값을 나타내어라
+        //1부터 입력받은수까지 모두 더한값을 나타내어라
+        let a = 0
+        for(let i=1;i<=20;i++){a += i} 
+        console.log(a)
+        const input = prompt('숫자를 입력해주세요.')
+        let b = 0
+        for(let i = 0;i<=Number(input);i++){b += i}
+        console.log(`%c${b}`,"border:1px solid black;color:white;background-color:black;margin:5px;font-size:30px;")
+        document.write(`<h2>입력하신 ${input}까지의 합은 ${b}입니다.</h2>`)
+    </script>
+    <style>
+        h2{
+            font-size: 50px;
+            border:1px dotted black;
+            background-color: gray;
+            color: yellow;
+            transition: transform 3s ease-in-out;
+        }
+        h2:hover{
+            color: green;
+            transform: rotate(100deg) scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
