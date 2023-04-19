@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for구문으로 별모양 연습</title>
+    <script>
+        let list = ''
+        for(let i=0;i<10;i++){
+            for(let j=10;j>i;j--){
+                list +=' '
+            }
+           for(let k=0;k<i*2+1;k++){
+                list +='*'
+            }
+            list +='\n'
+        }
+        console.log(list)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
