@@ -23,7 +23,55 @@
         }
         for(let j=0;j<dice.length-1;j++){dice[6]+=dice[j]}
         console.log(dice)
+        document.write(`<table>
+        <tr>
+            <th>1이 나온 횟수</th>
+            <th>2가 나온 횟수</th>
+            <th>3이 나온 횟수</th>
+            <th>4가 나온 횟수</th>
+            <th>5가 나온 횟수</th>
+            <th>6이 나온 횟수</th>
+        </tr>
+        <tr>
+            <td>${dice[0]}</td>
+            <td>${dice[1]}</td>
+            <td>${dice[2]}</td>
+            <td>${dice[3]}</td>
+            <td>${dice[4]}</td>
+            <td>${dice[5]}</td>
+        </tr>
+        <tr>
+            <th>1이 나올 확률</th>
+            <th>2가 나올 확률</th>
+            <th>3이 나올 확률</th>
+            <th>4가 나올 확률</th>
+            <th>5가 나올 확률</th>
+            <th>6이 나올 확률</th>
+        </tr>
+        <tr>
+            <td>${dice[0]/10000*100}%</td>
+            <td>${dice[1]/10000*100}%</td>
+            <td>${dice[2]/10000*100}%</td>
+            <td>${dice[3]/10000*100}%</td>
+            <td>${dice[4]/10000*100}%</td>
+            <td>${dice[5]/10000*100}%</td>
+        </tr>
+        <tr>
+            <th colspan="6">총합</th>
+        </tr>
+        <tr>
+            <td colspan="6">${dice[6]}번</td>
+        </tr>
+    </table>`)
     </script>
+    <style>
+        table{border-collapse: collapse;
+            text-align: center;
+            margin: 5px;
+            }
+        th,td{border: 1px solid black;
+          }
+    </style>
 </head>
 <body>
     
