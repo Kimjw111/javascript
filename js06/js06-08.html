@@ -17,10 +17,10 @@
         */
         const a = ['가위', '바위', '보']
         let c = 0
-        for(let i = 1; i < 6; i++){
-            const input = prompt('가위, 바위, 보 중에 입력해주세요.')
-            let b = Math.floor(Math.random()*3)
-            if(a[b] == '가위'){
+        for(let i = 1; i < 6; i++){ //5번 진행할때
+            const input = prompt('가위, 바위, 보 중에 입력해주세요.') //가위바위보 중 입력받아
+            let b = Math.floor(Math.random()*3) // 컴퓨터가 랜덤으로 낸값이 가위바위보중
+            if(a[b] == '가위'){ //가위일때 내가 낸값의 경우의 수
             if(input=='가위'){
                 alert('비김')
             } if(input=='바위'){
@@ -29,7 +29,7 @@
             } if(input=='보'){
                 alert('패배')
             }
-        } if(a[b] == '바위'){
+        } if(a[b] == '바위'){ // 바위일때 내가 낸값의 경우의 수
             if(input=='가위'){
                 alert('패배')
             } if(input=='바위'){
@@ -38,7 +38,7 @@
                 alert('승리')
                 c += 1
             }
-        } if(a[b] == '보'){
+        } if(a[b] == '보'){ // 보일때 내가 낸값의 경우의 수
             if(input=='가위'){
                 alert('승리')
                 c += 1
@@ -49,7 +49,7 @@
             }
         }
     }
-    console.log(`5판중 당신은 ${c}판을 이겼으므로 승률은 ${c/5*100}%입니다.`)
+    console.log(`5판중 당신은 ${c}판을 이겼으므로 승률은 ${c/5*100}%입니다.`) //c는 이긴 판수 이길때마다 +1씩
     </script>
 </head>
 <body>
