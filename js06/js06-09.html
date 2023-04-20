@@ -9,11 +9,80 @@
         /* 1.주사위 10만번 던져서 
         2.1에서 6까지 몇번 나오는지
         3.통계를 내어라.
-        4.검증을 하여라. */
-        const arr = [1,2,3,4,5,6]
-        const ran = Math.floor(Math.random()*6)
-        for(let i=0;let<100000;i++){} 
+        4.검증을 하여라. 
+        5.확률은 나온값/전체값x100 */
+        let c = 0
+        let d = 0
+        let f = 0
+        let g = 0
+        let h = 0
+        let l = 0
+        for(let i=0;i<100000;i++){
+            let a = Math.floor(Math.random()*6)+1
+        if(a == 1){c += 1}
+        if(a == 2){d += 1}
+        if(a == 3){f += 1}
+        if(a == 4){g += 1}
+        if(a == 5){h += 1}
+        if(a == 6){l += 1}
+    }
+    /*console.log(` 1은 ${c} 2는 ${d} 3은 ${f} 4는 ${g} 5는 ${h} 6은 ${l}`)       
+    console.log(` 1이 나올확률은 ${c/100000*100}% 
+    2가 나올확률은 ${d/100000*100}% 
+    3이 나올확률은 ${f/100000*100}%
+     4가 나올확률은 ${g/100000*100}% 
+    5가 나올확률은 ${h/100000*100}%
+     6이 나올확률은 ${l/100000*100}%`)       
+    console.log(`총합은? ${c+d+f+g+h+l}`)*/
+    document.write(`<table>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+    </tr>
+    <tr>
+        <td>${c}</td>
+        <td>${d}</td>
+        <td>${f}</td>
+        <td>${g}</td>
+        <td>${h}</td>
+        <td>${l}</td>
+    </tr>
+    <tr>
+        <th>1이 나올 확률은</th>
+        <th>2가 나올 확률은</th>
+        <th>3이 나올 확률은</th>
+        <th>4가 나올 확률은</th>
+        <th>5가 나올 확률은</th>
+        <th>6이 나올 확률은</th>
+    </tr>
+    <tr>
+        <td>${c/100000*100}%</td>
+        <td>${d/100000*100}%</td>
+        <td>${f/100000*100}%</td>
+        <td>${g/100000*100}%</td>
+        <td>${h/100000*100}%</td>
+        <td>${l/100000*100}%</td>
+    </tr>
+    <tr>
+        <th colspan="6">총합은?</th>
+    </tr>
+    <tr>
+        <td colspan="6">${c+d+f+g+h+l}</td>
+    </tr>
+   </table>`)       
     </script>
+    <style>
+        table{border-collapse: collapse;
+            text-align: center;
+            }
+        th,td{border: 1px solid black;
+            margin:5px;
+            padding:15px;}
+    </style>
 </head>
 <body>
     

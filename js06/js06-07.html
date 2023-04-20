@@ -12,13 +12,17 @@
         4. 맞추면 성공축하 메세지(정답 보여주기) */
     const a = Math.floor(Math.random()*100)
     console.log(a)
-    while(true){
-        let input = prompt('숫자를 입력하세요.')
+    let i=0
+    while(i<=5){
+        i++ 
+        let input = prompt(`숫자를 입력하세요.${a}`)
         if(input<a){alert('up')}
         else if(input>a){alert('down')}
         else{alert('축하합니다.');
-        break}
         }
+        if(i==5){alert(`게임오버 답은 ${a}`)
+    break}
+    }
     </script>
 </head>
 <body> 
