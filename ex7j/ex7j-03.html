@@ -13,6 +13,7 @@
       
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script>
+        console.time('연산시간측정')
         //내코드 주사위통계
         const dice = [0,0,0,0,0,0,0]
         for(let i=0;i<10000;i++){
@@ -22,9 +23,10 @@
                    dice[ran-1]++
                     }
         for(let j=0;j<dice.length-1;j++){dice[6]+=dice[j]}
-        console.log(dice)
         const dchart = dice.splice(0,dice.length-1)
-
+        console.log(dchart)
+        console.log(dice)
+        console.timeEnd('연산시간측정')
         // 차트그리기   
         const ctx = document.getElementById('myChart');
         new Chart(ctx, {

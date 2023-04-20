@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /* const a = Math.floor(Math.random()*45)+1
+        const b = Math.floor(Math.random()*45)+1
+        const c = Math.floor(Math.random()*45)+1
+        const arr = [a,b,c] 
+        console.log(arr)*/
+    const array = new Uint8Array(3);
+    crypto.getRandomValues(array);
+    const ran1 = array[0]%45 +1
+    const ran2 = array[1]%45 +1
+    const ran3 = array[2]%45 +1
+    const arr2 = [ran1,ran2,ran3]
+    console.log(arr2) 
+    /* const group = ['','','']
+    const a = Math.floor(Math.random()*45)+1
+    const b = Math.floor(Math.random()*45)+1
+    const c = Math.floor(Math.random()*45)+1
+    group.splice(0,1,a)
+    group.splice(1,1,b)
+    group.splice(2,1,c)
+    console.log(group) */
+    const arr = []
+    for(let i=1;i<=3;i++){
+        const a = Math.floor(Math.random()*45) +1
+        arr.push(a)
+       
+       } 
+    console.log(arr)
+       </script>
+</head>
+<body>
+    
+</body>
+</html>

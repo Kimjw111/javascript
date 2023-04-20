@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const input = prompt('현재온도를 입력해주세요.')
+        let a = '온도가 낮아요'
+        let b = '시원하네요'
+        let c = '보통이에요'
+        let d = '따뜻하네요'
+        let e = '온도가 높아요'
+        if(input<16){ 
+            document.write(`<table>
+        <tr>
+            <th colspan="6">16미만</th>
+            <th colspan="4">16이상~22미만</th>
+            <th colspan="4">22이상~28미만</th>
+            <th colspan="3">28이상~32미만</th>
+            <th colspan="6">32이상</th>
+        </tr>
+        <tr>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="brown"></td>
+            <td class="brown"></td>
+            <td class="brown"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+        </tr>
+        <tr>
+            <td colspan="6">${a}</td>
+            <td colspan="4"></td>
+            <td colspan="4"></td>
+            <td colspan="3"></td>
+            <td colspan="6"></td>
+        </tr>
+    </table>
+    <h2>지금 온도는 ${input} 이며, 상태는 ${a}이에요.</h2>`)
+        }else if(16<=input&&input<22){ document.write(`<table>
+        <tr>
+            <th colspan="6">16미만</th>
+            <th colspan="4">16이상~22미만</th>
+            <th colspan="4">22이상~28미만</th>
+            <th colspan="3">28이상~32미만</th>
+            <th colspan="6">32이상</th>
+        </tr>
+        <tr>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="brown"></td>
+            <td class="brown"></td>
+            <td class="brown"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+        </tr>
+        <tr>
+            <td colspan="6"></td>
+            <td colspan="4">${b}</td>
+            <td colspan="4"></td>
+            <td colspan="3"></td>
+            <td colspan="6"></td>
+        </tr>
+    </table>
+    <h2>지금 온도는 ${input} 이며, 상태는 ${b}이에요.</h2>`)
+          
+        }else if(22<=input&&input<28){ document.write(`<table>
+        <tr>
+            <th colspan="6">16미만</th>
+            <th colspan="4">16이상~22미만</th>
+            <th colspan="4">22이상~28미만</th>
+            <th colspan="3">28이상~32미만</th>
+            <th colspan="6">32이상</th>
+        </tr>
+        <tr>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="brown"></td>
+            <td class="brown"></td>
+            <td class="brown"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+        </tr>
+        <tr>
+            <td colspan="6"></td>
+            <td colspan="4"></td>
+            <td colspan="4">${c}</td>
+            <td colspan="3"></td>
+            <td colspan="6"></td>
+        </tr>
+    </table>
+    <h2>지금 온도는 ${input} 이며, 상태는 ${c}이에요.</h2>`)
+            
+        }else if(28<=input&&input<32){
+            document.write(`<table>
+        <tr>
+            <th colspan="6">16미만</th>
+            <th colspan="4">16이상~22미만</th>
+            <th colspan="4">22이상~28미만</th>
+            <th colspan="3">28이상~32미만</th>
+            <th colspan="6">32이상</th>
+        </tr>
+        <tr>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="brown"></td>
+            <td class="brown"></td>
+            <td class="brown"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+        </tr>
+        <tr>
+            <td colspan="6"></td>
+            <td colspan="4"></td>
+            <td colspan="4"></td>
+            <td colspan="3">${d}</td>
+            <td colspan="6"></td>
+        </tr>
+    </table>
+    <h2>지금 온도는 ${input} 이며, 상태는 ${d}이에요.</h2>`)
+        }else{ document.write(`<table>
+        <tr>
+            <th colspan="6">16미만</th>
+            <th colspan="4">16이상~22미만</th>
+            <th colspan="4">22이상~28미만</th>
+            <th colspan="3">28이상~32미만</th>
+            <th colspan="6">32이상</th>
+        </tr>
+        <tr>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="pulple"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="yellow"></td>
+            <td class="brown"></td>
+            <td class="brown"></td>
+            <td class="brown"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+            <td class="red"></td>
+        </tr>
+        <tr>
+            <td colspan="6"></td>
+            <td colspan="4"></td>
+            <td colspan="4"></td>
+            <td colspan="3"></td>
+            <td colspan="6">${e}</td>
+        </tr>
+    </table>
+    <h2>지금 온도는 ${input} 이며, 상태는 ${e}이에요.</h2>`)
+    }
+        </script>
+        <style>
+            table{
+                border-collapse: collapse;
+                text-align: center;
+                
+            }
+            th,td{border:1px solid black;
+            width: 200px;
+        height: 20px;}
+              .pulple{background-color: purple;}
+              .blue{background-color: blue;}
+              .yellow{background-color: yellow;}
+              .brown{background-color: bisque;}
+              .red{background-color: red;}            
+        </style>
+</head>
+<body>
+     
+</body>
+</html>
