@@ -10,14 +10,15 @@
         2.1에서 6까지 몇번 나오는지
         3.통계를 내어라.
         4.검증을 하여라. 
-        5.확률은 나온값/전체값x100 */
+        5.확률은 나온값/전체값x100
+        6. 3이 더 나오게 하기 */
         let c = 0
         let d = 0
-        let f = 0
+        let f = 100000
         let g = 0
         let h = 0
         let l = 0
-        for(let i=0;i<1000000;i++){
+        for(let i=0;i<900000;i++){
             let a = Math.floor(Math.random()*6)+1
         if(a == 1){c += 1}
         if(a == 2){d += 1}
