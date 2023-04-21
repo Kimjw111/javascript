@@ -7,11 +7,11 @@
     <title>Document</title>
     <script>
         const input = prompt('현재온도를 입력해주세요.')
-        let a = '온도가 낮아요'
+        let a = '정상온도를 벗어났습니다'
         let b = '시원하네요'
         let c = '보통이에요'
-        let d = '따뜻하네요'
-        let e = '온도가 높아요'
+        let d = '갑갑하네요'
+        let e = '정상온도를 벗어났습니다'
         if(input<16){ 
             document.write(`<table>
         <tr>
@@ -54,7 +54,7 @@
             <td colspan="6"></td>
         </tr>
     </table>
-    <h2>지금 온도는 ${input} 이며, 상태는 ${a}이에요.</h2>`)
+    <h2>지금 온도는 ${input} 이며, 상태는 ${a}.</h2>`)
         }else if(16<=input&&input<22){ document.write(`<table>
         <tr>
             <th colspan="6">16미만</th>
@@ -96,7 +96,7 @@
             <td colspan="6"></td>
         </tr>
     </table>
-    <h2>지금 온도는 ${input} 이며, 상태는 ${b}이에요.</h2>`)
+    <h2>지금 온도는 ${input} 이며, 상태는 ${b}.</h2>`)
           
         }else if(22<=input&&input<28){ document.write(`<table>
         <tr>
@@ -139,7 +139,7 @@
             <td colspan="6"></td>
         </tr>
     </table>
-    <h2>지금 온도는 ${input} 이며, 상태는 ${c}이에요.</h2>`)
+    <h2>지금 온도는 ${input} 이며, 상태는 ${c}.</h2>`)
             
         }else if(28<=input&&input<32){
             document.write(`<table>
@@ -183,7 +183,7 @@
             <td colspan="6"></td>
         </tr>
     </table>
-    <h2>지금 온도는 ${input} 이며, 상태는 ${d}이에요.</h2>`)
+    <h2>지금 온도는 ${input} 이며, 상태는 ${d}.</h2>`)
         }else{ document.write(`<table>
         <tr>
             <th colspan="6">16미만</th>
@@ -225,7 +225,7 @@
             <td colspan="6">${e}</td>
         </tr>
     </table>
-    <h2>지금 온도는 ${input} 이며, 상태는 ${e}이에요.</h2>`)
+    <h2>지금 온도는 ${input} 이며, 상태는 ${e}.</h2>`)
     }
         </script>
         <style>
