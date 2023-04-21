@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const v = [] //v를 빈 배열로 주고
+        for(let x = 0; x < 6; x++){ //6번 뽑았을때
+            let rin = Math.floor(Math.random()*45)+1 // 1에서 45까지 랜덤으로 숫자를 뽑고
+            if(v.indexOf(rin)===-1){ // 첫번째 뽑았을때
+                v.push(rin) //빈 배열에 추가하고 돌아가서 두번째 뽑고 추가하고 6번뽑는데
+            } else { // 숫자가 겹치면
+                rin = Math.floor(Math.random()*45)+1 //새로뽑아서
+                v.push(rin) //다시 추가함 안겹칠때까지
+            }
+        }
+        console.log(v)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
