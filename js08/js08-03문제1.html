@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1~45까지 숫자를 랜덤으로 3개 뽑고
+        // 오름차순으로 정렬 중복안되게
+        const arr = []
+        for(let i=1;i<6;i++){
+            let a = Math.floor(Math.random()*45)+1
+            if(arr.indexOf(a)=== -1){
+                arr.push(a)
+            } else{
+                let a=Math.floor(Math.random()*45)+1 //아닐경우 따로 a값을 뽑는 이유는 위에 a값 그대로 쓰면 겹침
+                arr.push(a)
+            }
+
+        }
+        for(let i=1;i<100;i++){
+            if(arr[0]<arr[1]&&arr[1]<arr[2]&&arr[2]<arr[3]&&arr[3]<arr[4])break
+            if(arr[0]>arr[1]){
+                [arr[0],arr[1],arr[2],arr[3],arr[4]]=[arr[1],arr[0],arr[2],arr[3],arr[4]]
+            }
+            if(arr[1]>arr[2]){
+                [arr[0],arr[1],arr[2],arr[3],arr[4]]=[arr[0],arr[2],arr[1],arr[3],arr[4]]
+            }
+            if(arr[2]>arr[3]){
+                [arr[0],arr[1],arr[2],arr[3],arr[4]]=[arr[0],arr[1],arr[3],arr[2],arr[4]]
+            }
+            if(arr[3]>arr[4]){
+            [arr[0],arr[1],arr[2],arr[3],arr[4]]=[arr[0],arr[1],arr[2],arr[4],arr[3]]
+            }
+        }
+        console.log(arr)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
