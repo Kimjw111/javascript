@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //구구단 한줄 입력받으면 그 밑으로 X9까지 쭉 출력되게
+        const input = prompt('숫자를 입력하세요','1~9')*1
+        for(let i=0;i<10-input;i++){
+            for(let j=1;j<10;j++){
+                let list = ''
+                list += `<table><tr><td>${input+i}</td><td>X ${j}</td><td>${(input+i)*j}</td></tr></table>`
+                document.write(list)
+            }
+        }
+    </script>
+    <style>
+        table{border-collapse: collapse;
+            text-align: center;
+            }
+        tr td{border: 1px solid black;
+            height: 50px;
+            width: 50px;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
