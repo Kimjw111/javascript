@@ -6,22 +6,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-    function lotto(){ 
-        const arr = [] 
+        let a = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        function lotto(){
+        let arr = []
         while(arr.length<6){
-            const ran = Math.floor(Math.random()*45+1)
+            let ran = Math.floor(Math.random()*45+1)
             if(!arr.includes(ran))arr.push(ran)
-        }
-        console.log(arr.sort((a,b)=>(a-b)))
+            if(ran==1){a[0]++}
+            if(ran==2){a[1]++}
+            if(ran==3){a[2]++}
+            if(ran==4){a[3]++}
+            if(ran==5){a[4]++}
+            if(ran==6){a[5]++}
+            if(ran==7){a[6]++}
+            if(ran==8){a[7]++}
+            if(ran==9){a[8]++}
+            if(ran==10){a[9]++}
+            if(ran==11){a[10]++}
+            if(ran==12){a[11]++}
+            if(ran==13){a[12]++}
+            if(ran==14){a[13]++}
+            if(ran==15){a[14]++}
+            if(ran==16){a[15]++}
+            if(ran==17){a[16]++}
+            if(ran==18){a[17]++}
+            if(ran==19){a[18]++}
+            if(ran==20){a[19]++}
+            if(ran==21){a[20]++}
+            if(ran==22){a[21]++}
+            if(ran==23){a[22]++}
+            if(ran==24){a[23]++}
+            if(ran==25){a[24]++}
+            if(ran==26){a[25]++}
+            if(ran==27){a[26]++}
+            if(ran==28){a[27]++}
+            if(ran==29){a[28]++}
+            if(ran==30){a[29]++}
+            if(ran==31){a[30]++}
+            if(ran==32){a[31]++}
+            if(ran==33){a[32]++}
+            if(ran==34){a[33]++}
+            if(ran==35){a[34]++}
+            if(ran==36){a[35]++}
+            if(ran==37){a[36]++}
+            if(ran==38){a[37]++}
+            if(ran==39){a[38]++}
+            if(ran==40){a[39]++}
+            if(ran==41){a[40]++}
+            if(ran==42){a[41]++}
+            if(ran==43){a[42]++}
+            if(ran==44){a[43]++}
+            if(ran==45){a[44]++}
+               }
+        console.log(arr.sort((a,b)=>(a-b)))}
+        for(let i =0;i<10;i++){
+            console.log(i+1)
+            lotto()
+                  }
+   document.write(`<table>
+        <tr>
+            <th>1이 나올 확률</th>
+            <th>2이 나올 확률</th>
+            <th>3이 나올 확률</th>
+            <th>4이 나올 확률</th>
+            <th>5이 나올 확률</th>
+            <th>6이 나올 확률</th>
+            <th>7이 나올 확률</th>
+            <th>8이 나올 확률</th>
+            <th>9이 나올 확률</th>
+            <th>10이 나올 확률</th>
+            <th>11이 나올 확률</th>
+            <th>12이 나올 확률</th>
+            <th>13이 나올 확률</th>
+            <th>14이 나올 확률</th>
+            <th>15이 나올 확률</th>
+            <th>16이 나올 확률</th>
+            <th>17이 나올 확률</th>
+            <th>18이 나올 확률</th>
+            <th>19이 나올 확률</th>
+            <th>20이 나올 확률</th>
+            <th>21이 나올 확률</th>
+            <th>22이 나올 확률</th>
+            <th>23이 나올 확률</th>
+            <th>24이 나올 확률</th>
+            <th>25이 나올 확률</th>
+            <th>26이 나올 확률</th>
+            <th>27이 나올 확률</th>
+            <th>28이 나올 확률</th>
+            <th>29이 나올 확률</th>
+            <th>30이 나올 확률</th>
+            <th>31이 나올 확률</th>
+            <th>32이 나올 확률</th>
+            <th>33이 나올 확률</th>
+            <th>34이 나올 확률</th>
+            <th>35이 나올 확률</th>
+            <th>36이 나올 확률</th>
+            <th>37이 나올 확률</th>
+            <th>38이 나올 확률</th>
+            <th>39이 나올 확률</th>
+            <th>40이 나올 확률</th>
+            <th>41이 나올 확률</th>
+            <th>42이 나올 확률</th>
+            <th>43이 나올 확률</th>
+            <th>44이 나올 확률</th>
+            <th>45이 나올 확률</th>
+            <th>총합은</th>
+        </tr>
+        <tr>
+            <td>${a[0]}</td>
+            <td>${a[1]}</td>
+            <td>${a[2]}</td>
+            <td>${a[3]}</td>
+            <td>${a[4]}</td>
+            <td>${a[5]}</td>
+            <td>${a[6]}</td>
+            <td>${a[7]}</td>
+            <td>${a[8]}</td>
+            <td>${a[9]}</td>
+            <td>${a[10]}</td>
+            <td>${a[11]}</td>
+            <td>${a[12]}</td>
+            <td>${a[13]}</td>
+            <td>${a[14]}</td>
+            <td>${a[15]}</td>
+            <td>${a[16]}</td>
+            <td>${a[17]}</td>
+            <td>${a[18]}</td>
+            <td>${a[19]}</td>
+            <td>${a[20]}</td>
+            <td>${a[21]}</td>
+            <td>${a[22]}</td>
+            <td>${a[23]}</td>
+            <td>${a[24]}</td>
+            <td>${a[25]}</td>
+            <td>${a[26]}</td>
+            <td>${a[27]}</td>
+            <td>${a[28]}</td>
+            <td>${a[29]}</td>
+            <td>${a[30]}</td>
+            <td>${a[31]}</td>
+            <td>${a[32]}</td>
+            <td>${a[33]}</td>
+            <td>${a[34]}</td>
+            <td>${a[35]}</td>
+            <td>${a[36]}</td>
+            <td>${a[37]}</td>
+            <td>${a[38]}</td>
+            <td>${a[39]}</td>
+            <td>${a[40]}</td>
+            <td>${a[41]}</td>
+            <td>${a[42]}</td>
+            <td>${a[43]}</td>
+            <td>${a[44]}</td>
+            <td>${a[0]+a[1]+a[2]+a[3]+a[4]+a[5]+a[6]+a[7]+a[8]+a[9]+a[10]+a[11]+a[12]+a[13]+a[14]+a[15]+a[16]+a[17]+a[18]+a[19]+a[20]+a[21]+a[22]+a[23]+a[24]+a[25]+a[26]+a[27]+a[28]+a[29]+a[30]+a[31]+a[32]+a[33]+a[34]+a[35]+a[36]+a[37]+a[38]+a[39]+a[40]+a[41]+a[42]+a[43]+a[44]}</td>
+        </tr>
+    </table>`) 
+   
+ </script>
+ <style>
+    table{
+        border-collapse: collapse;
     }
-    for(let i=0;i<10000;i++){
-        console.log(i)
-        lotto()
+    th,td{
+        border:1px solid black;
     }
-         
-</script>
+ </style>
 </head>
-<body>
- 
-</body>
+<body> 
+ </body>
 </html>

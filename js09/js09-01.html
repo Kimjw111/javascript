@@ -6,19 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로또 중복제거</title>
     <script>
-        function lotto(){
-        const arr = [] //로또를 담을 칸을 지정
+    const arr = [] //로또를 담을 칸을 지정
         while(arr.length<6){// 5개 까지 뽑고 멈춰라
             const ran = Math.floor(Math.random()*45+1)
             if(!arr.includes(ran))arr.push(ran)
         }
-        console.log(arr.sort((a,b)=>(a-b)))
-    }
-    for(let i=0;i<100;i++){
-        console.log(i+1)
-       lotto()
-    }
-   
+        console.log(arr.sort((a,b)=>(a-b))) 
     </script>
 </head>
 <body>
