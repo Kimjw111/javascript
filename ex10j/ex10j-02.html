@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function lotto1(){
+            const arr1=[]
+            for(let i=0;i<6;i++){
+                let a = Math.floor(Math.random()*45+1)
+                if(!arr1.includes(a))arr1.push(a)
+            }
+            document.write(`<p><mark>${arr1}</mark></p>`)
+        }
+        function lotto2(){
+            const arr2=[]
+            while(arr2.length<6){
+                let a = Math.floor(Math.random()*45+1)
+                if(!arr2.includes(a))arr2.push(a)
+                arr2.sort((a,b)=>(a-b))
+                }
+           
+            document.write(`<p><mark>${arr2}</mark></p>`)
+         }
+    </script>
+</head>
+<body>
+    <button onclick="lotto1()">버튼1</button>
+    <button onclick="lotto2()">버튼2</button>
+</body>
+</html>

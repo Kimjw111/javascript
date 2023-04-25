@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 당첨번호 확률</title>
+    <script>
+        const count =[]
+        for(let j=0;j<46;j++)count.push(0)
+        function lotto(){
+        const arr = [] 
+        while(arr.length<6){
+            const ran = Math.floor(Math.random()*45+1)
+            if(!arr.includes(ran))arr.push(ran)
+        }
+        console.log(arr.sort((a,b)=>(a-b)))
+        for(let k=0;k<6;k++)count[arr[k]]++
+        }
+        for(let i=0;i<100;i++){
+            console.log(i+1)
+            lotto()
+        }
+        console.log(count)
+</script>
+</head>
+<body>
+    
+</body>
+</html>
