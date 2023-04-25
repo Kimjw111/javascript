@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function x2(){
+        let a=2
+        let list = ''
+            for(let i=1;i<10;i++){
+            list +=`<table style="border-collapse: collapse;width: 100px;height:30px;text-align: center;background-color:aqua;"><tr><td style="border: 1px solid black;">${a}</td><td style="border: 1px solid black;">X${i}</td><td style="border: 1px solid black;">=${a*i}</td></tr></table>`
+            
+        }
+        document.close()
+        document.write(`${list}<div onclick="x2()">2단</div>
+   <div onclick="x3()">3단</div>
+   <div onclick="x4()">4단</div>`)}  
+        function x3(){
+        let b=3
+        let list = ''
+            for(let i=1;i<10;i++){
+            list +=`<table style="border-collapse: collapse;width: 100px;height:30px;text-align: center;background-color:aqua;"><tr><td style="border: 1px solid black;">${b}</td><td style="border: 1px solid black;">X${i}</td><td style="border: 1px solid black;">=${b*i}</td></tr></table>`
+            
+        }
+        document.close()
+        document.write(`${list}<div onclick="x2()">2단</div>
+   <div onclick="x3()">3단</div>
+   <div onclick="x4()">4단</div>`)}  
+        function x4(){
+        let c=4
+        let list = ''
+            for(let i=1;i<10;i++){
+            list +=`<table style="border-collapse: collapse;width: 100px;height:30px;text-align: center;background-color:aqua;"><tr><td style="border: 1px solid black;">${c}</td><td style="border: 1px solid black;">X${i}</td><td style="border: 1px solid black;">=${c*i}</td></tr></table>`
+            
+        }document.close()
+        document.write(`${list}<div onclick="x2()">2단</div>
+        <div onclick="x3()">3단</div>
+        <div onclick="x4()">4단</div>`)
+        }
+    </script>
+</head>
+<body>
+   <div onclick="x2()">2단</div>
+   <div onclick="x3()">3단</div>
+   <div onclick="x4()">4단</div>
+</body>
+</html>
