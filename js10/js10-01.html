@@ -32,7 +32,7 @@
             }
             const ctx = document.getElementById('myChart');
         new Chart(ctx, {
-          type: 'line',
+          type: 'bubble',
           data: {
             labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19','20',
                     '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39',
@@ -41,9 +41,9 @@
               label: '# of Votes',
               data: a,
               // 데이터에 위에서 정한 값을 넣어주고
-              borderWidth: 1,
-              borderColor: '#FF6384',
-              backgroundColor: '#FFB1C1',
+              borderWidth: 2,
+              borderColor: 'pink',
+              backgroundColor: 'red',
              //백그라운드 칼러 따옴표로 넣어주는데 칼러에 c는 대문자 따옴표에 칼러 색이나 rgb로 넣을수 있음
             }]
           },
