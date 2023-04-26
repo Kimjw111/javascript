@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>함수의 파라미터, 리턴</title>
+    <title>매게변수, 리턴</title>
     <script>
-        let val = 777
-        function fn(){
-            val=888
-            console.log(val)
-            return 100
-            val=999
-            console.log(val)
+        
+        function fn(num=123){
+           return num
         }
-        const v1 = fn()
-        console.log(v1)
+        console.log('fn(333)',fn(333))
+        const arr=[11,22,33,44,55,fn(),fn(444)]
+        console.log('arr',arr)
 </script>
 </head>
 <body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function margin(mag){
+        let a = [800000, 2200000, 2000000, 120000, 80000, 50000, 6050000]
+        let list = ''
+        for(let j=1;j<=4;j++){list += `<button onclick="margin(${j*10/100})">할인율${j*10}%</button>`}
+            list += `<table style=" border-collapse: collapse;text-align: center;width: 400px;height: 200px;">`
+            list += `<tr><th colspan="4"; style=" border: 1px solid black;">판매 품목</th></tr>`
+            list += `<tr><td style=" border: 1px solid black;background-color: darksalmon;">No.</td><td style=" border: 1px solid black;background-color: darksalmon;">품목</td><td style=" border: 1px solid black;background-color: darksalmon;">정가</td><td style=" border: 1px solid black;background-color: darksalmon;">할인율</td></tr>`
+            list += `<tr><td style=" border: 1px solid black;">1</td><td style=" border: 1px solid black;">컴퓨터</td><td style=" border: 1px solid black;">₩${a[0]}</td><td style=" border: 1px solid black;">₩${a[0]-a[0]*mag}</td></tr>`
+            list += `<tr><td style=" border: 1px solid black;">2</td><td style=" border: 1px solid black;">노트북</td><td style=" border: 1px solid black;">₩${a[1]}</td><td style=" border: 1px solid black;">₩${a[1]-a[1]*mag}</td></tr>`
+            list += `<tr><td style=" border: 1px solid black;">3</td><td style=" border: 1px solid black;">태블릿</td><td style=" border: 1px solid black;">₩${a[0]}</td><td style=" border: 1px solid black;">₩${a[0]-a[0]*mag}</td></tr>`
+            list += `<tr><td style=" border: 1px solid black;">4</td><td style=" border: 1px solid black;">스마트폰</td><td style=" border: 1px solid black;">₩${a[2]}</td><td style=" border: 1px solid black;">₩${a[2]-a[2]*mag}</td></tr>`
+            list += `<tr><td style=" border: 1px solid black;">5</td><td style=" border: 1px solid black;">공유기</td><td style=" border: 1px solid black;">₩${a[3]}</td><td style=" border: 1px solid black;">₩${a[3]-a[3]*mag}</td></tr>`
+            list += `<tr><td style=" border: 1px solid black;">6</td><td style=" border: 1px solid black;">키보드</td><td style=" border: 1px solid black;">₩${a[4]}</td><td style=" border: 1px solid black;">₩${a[4]-a[4]*mag}</td></tr>`
+            list += `<tr><td style=" border: 1px solid black;">7</td><td style=" border: 1px solid black;">마우스</td><td style=" border: 1px solid black;">₩${a[5]}</td><td style=" border: 1px solid black;">₩${a[5]-a[5]*mag}</td></tr>`
+            list += `<tr><td colspan="2"; style=" border: 1px solid black;">합계</td><td style=" border: 1px solid black;">₩${a[6]}</td><td style=" border: 1px solid black;">₩${a[6]-a[6]*mag}</td></tr></table>`
+        document.close()
+        document.write(list)
+        }
+    </script>
+</head>
+<body>
+    <button onclick="margin(0.1)">10%</button>
+    <button onclick="margin(0.2)">20%</button>
+    <button onclick="margin(0.3)">30%</button>
+    <button onclick="margin(0.4)">40%</button>
+</body>
+</html>
