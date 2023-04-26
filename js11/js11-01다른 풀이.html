@@ -14,7 +14,7 @@
         list += `<table style=" border-collapse: collapse;text-align: center;width: 400px;height: 200px;">`
             list += `<tr><th colspan="4"; style=" border: 1px solid black;">판매 품목</th></tr>`
             list += `<tr><td style=" border: 1px solid black;background-color: darksalmon;">No.</td><td style=" border: 1px solid black;background-color: darksalmon;">품목</td><td style=" border: 1px solid black;background-color: darksalmon;">정가</td><td style=" border: 1px solid black;background-color: darksalmon;">할인율</td></tr>`
-        for(let i=0;i<7;i++){list += `<tr><td style=" border: 1px solid black;">${i}</td><td style=" border: 1px solid black;">${b[i]}</td><td style=" border: 1px solid black;">₩${a[i]}</td><td style=" border: 1px solid black;">₩${a[i]-a[i]*mag}</td></tr>`}
+        for(let i=0;i<7;i++){list += `<tr><td style=" border: 1px solid black;">${i+1}</td><td style=" border: 1px solid black;">${b[i]}</td><td style=" border: 1px solid black;">₩${a[i]}</td><td style=" border: 1px solid black;">₩${a[i]-a[i]*mag}</td></tr>`}
             list += `<tr><td colspan="2"; style=" border: 1px solid black;">합계</td><td style=" border: 1px solid black;">₩${a[7]}</td><td style=" border: 1px solid black;">₩${a[7]-a[7]*mag}</td></tr></table>`
         document.close()
         document.write(list)
