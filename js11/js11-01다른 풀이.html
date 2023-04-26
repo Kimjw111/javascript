@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function margin(mag){
         let a = [800000, 2200000, 2000000, 800000, 120000, 80000, 50000, 6050000]
         let b = ['컴퓨터', '노트북', '태블릿', '스마트폰', '공유기', '키보드', '마우스']
+        function margin(mag){
         let list = ''
         for(let j=1;j<=4;j++){list += `<button onclick="margin(${j*10/100})">할인율${j*10}%</button>`}
         list += `<table style=" border-collapse: collapse;text-align: center;width: 400px;height: 200px;">`
