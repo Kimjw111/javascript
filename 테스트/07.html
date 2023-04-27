@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function min(a,b,c,d){
+            let arr= [a,b,c,d]
+            while(true){
+                if(arr[0]<arr[1]&&arr[1]<arr[2]&&arr[2]<arr[3])break;
+            if(arr[1]<arr[0]){
+                [arr[0],arr[1],arr[2],arr[3]]=[arr[1],arr[0],arr[2],arr[3]]
+            }if(arr[2]<arr[1]){
+                [arr[0],arr[1],arr[2],arr[3]]=[arr[0],arr[2],arr[1],arr[3]]
+            }if(arr[3]<arr[2]){
+                [arr[0],arr[1],arr[2],arr[3]]=[arr[0],arr[1],arr[3],arr[2]]
+            }}
+            return arr[0]
+          }
+        console.log(`min(12,13,1,2)에서 최소값은 ${min(12,13,1,2)}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

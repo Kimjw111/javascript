@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function min(arr){
+            for(;;){
+                if(arr[0]<arr[1]&&arr[1]<arr[2]&&arr[2]<arr[3])break;
+            if(arr[1]<arr[0]){
+                [arr[0],arr[1],arr[2],arr[3]]=[arr[1],arr[0],arr[2],arr[3]]
+            }if(arr[2]<arr[1]){
+                [arr[0],arr[1],arr[2],arr[3]]=[arr[0],arr[2],arr[1],arr[3]]
+            }if(arr[3]<arr[2]){
+                [arr[0],arr[1],arr[2],arr[3]]=[arr[0],arr[1],arr[3],arr[2]]
+            }}
+            return arr[0]
+          }
+        const arr = [10,23,8,11]
+       console.log(min(arr))
+    </script>
+</head>
+<body>
+    <!-- 매개변수 4개를 넣었을때 그중 가장 작은 수를 리턴
+    min(11,22,33,44) -->
+</body>
+</html>
