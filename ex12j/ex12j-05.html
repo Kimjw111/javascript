@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>숫자의 증감</title>
     <script>
-       
+        let x = 0
+       function add(a){
+            document.write(`<div>${x+=a}</div><button onclick="add(1)">증가</button><button onclick="sub(1)">감소</button>`)
+            document.close()
+    }
+    function sub(b){
+            document.write(`<div>${x-=b}</div><button onclick="add(1)">증가</button><button onclick="sub(1)">감소</button>`)
+            document.close()
+    }
     </script>
 </head>
 <body>
     <div>0</div>
-    <button>증가</button>
-    <button>감소</button>
+    <button onclick="add(1)">증가</button>
+    <button onclick="sub(1)">감소</button>
 </body>
 </html>
