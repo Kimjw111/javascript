@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    const arr = Array(200).fill(0).map((v,i)=>v=i+1)
+    const arr1=[]
+        arr.forEach(function(v,i){
+            if(0<=i&&i<=77){
+                arr1.push(v)
+            }
+            if(78<=i&&i<=166){ arr1.push(arr[77]+=2)}
+            if(167<=i&&i<=200){arr1.push( arr[77]-=1)}
+        })
+        console.log(arr1)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
