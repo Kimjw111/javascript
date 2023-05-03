@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속도테스트</title>
+    <script>
+        const arr = []
+        for(let i=0;i<10000000;i++)arr.push(i)
+        console.time('for - 10000000')
+        for(let i=0;i<10000000;i++){}
+        console.timeEnd('for - 10000000') // 6.98681640625 ms
+        console.time('for - length - start')
+        const cnt = arr.length
+        for(let i=cnt;i>0;i--){}
+        console.timeEnd('for - length - start') // 6.81982421875 ms
+        console.time('let: for - length - End')
+        for(let i=0;i<arr.length;i++){}
+        console.timeEnd('let: for - length - End') // 7.427001953125 ms
+        console.time('var: for - length - End')
+        for(var i=0;i<arr.length;i++){}
+        console.timeEnd('var: for - length - End') // 20.744140625 ms
+        console.time('forEach')
+        arr.forEach(function(v,i){})
+        console.timeEnd('forEach') // 87.193115234375 ms
+        console.time('forEach : =>')
+        arr.forEach((v)=>{})
+        console.timeEnd('forEach : =>') // 85.453125 ms
+        console.time('for-of')
+        for(let item of arr){}
+        console.timeEnd('for-of') // 117.690185546875 ms
+        console.time('for-in')
+        for(let idex in arr){}
+        console.timeEnd('for-in') // 3090.68017578125 ms 느림 안쓰는게....
+        console.time('map()')
+        arr.map((v)=>{})
+        console.timeEnd('map()') // 118.447265625 ms
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
