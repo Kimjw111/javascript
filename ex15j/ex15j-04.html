@@ -7,9 +7,11 @@
     <title>Document</title>
     <script>
         arr = Array(200).fill(0).map((v,i)=>v=i+1)
-        for(let i =0;i<arr[76];i++)arr[i]=arr[i]+1
-        for(let i =arr[76];i<arr[164];i++)arr[i]=arr[i]+2
-        for(let i =arr[164];i<arr[199];i++)arr[i]=arr[i]-1
+        arr.forEach(function(v,i){
+            if(78<=i&&i<=166){
+               return v=arr[i]+2
+            }
+        })
         console.log(arr)
     </script>
 </head>
