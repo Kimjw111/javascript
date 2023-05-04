@@ -10,7 +10,8 @@
         // 글자가 다섯글자 이상만 뽑아서 새로운 배열에 넣으세요
         const arr2 = []
         for(let i=0;i<arr1.length;i++)if(arr1[i].length>=5)arr2.push(arr1[i])
-        console.log(arr2.sort)
+        arr2.sort((b,a)=>a.length-b.length);
+        console.log(arr2)
     </script>
 </head>
 <body>

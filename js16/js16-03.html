@@ -9,6 +9,7 @@
         const arr1 = ['apple','pear','watermelon','melon','peach','strawberry','mango','banana','kiwi','grape','orange','mandarin']
         const fruits = arr1.filter(function(v){
             return v.length>=5})
+            fruits.sort((b,a)=>a.length-b.length);
             console.log(fruits)
             list = ''
             list += `<table>`
@@ -23,10 +24,12 @@
 </script>
 <style>
     table{border-collapse: collapse;
-        text-align: center;}
+        text-align: center;
+        height: 100px;}
     td{border: 1px solid black;
         color: brown;
-        background-color: aliceblue;}
+        background-color: aliceblue;
+        width: 80px;}
         td:hover{background-color: aqua;
             color: white;}
 </style>
