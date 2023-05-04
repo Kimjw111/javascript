@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열문제</title>
+    <script>
+        let ct = 0; // 새로운 값을 줘서 걔가 계산되게 함 얘를 map내부에 넣으면 값이 계속 초기화되서 밖으로 빼놔야 됨
+        const arr = Array(200).fill(0).map((v,i)=>{
+            if(i<=77)ct+=1
+            // if(77<i&&i<=166)return i+2//i는 계속 올라가서 인덱스값을 일일이 기억못함
+            if(77<i&&i<=166)ct+=2
+            if(i>166)ct-=1
+            return ct
+                })
+        console.log(arr)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
