@@ -8,7 +8,7 @@
     <script>
         let input = prompt('숫자를 입력해주세요.')*1
         let ct = 0
-        const tid = setInterval(()=>{document.close();document.write(`<h1>${++ct}초 입니다.</h1>`)},0.5*1000)
+        const tid = setInterval(()=>{document.close();document.write(`<h1>${++ct}</h1>`)},0.5*1000)
         setTimeout(()=>{clearInterval(tid)
             document.write(`<h1 style="color:red;">${input}만큼 증가 했습니다.</h1>`)
         },input*0.5*1000)
