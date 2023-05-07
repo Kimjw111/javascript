@@ -13,10 +13,16 @@
             document.close();
             document.write(`<div style="border: 1px solid black;width: 100px;height: 100px;background-color: red;border-radius: 50px;"></div>`)
         },1*1000)},1.5*1000)
-           
+        setTimeout(()=>{clearInterval(light)
+        document.close();document.write(`<div style="border: 1px solid black;width: 100px;height: 100px;background-color: white;border-radius: 50px;"></div>`)},15.5*1000)   
     </script>
+    <style>
+        div{
+            border: 1px solid black;width:100px;height: 100px;background-color: white;border-radius: 50px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div></div>
 </body>
 </html>
