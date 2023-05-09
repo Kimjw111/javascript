@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호이스팅3</title>
+    <!-- <script>
+        /* 호이스팅은 변수나 함수의 선언이 코드 최상단으로 끌어 올려지는 현상*/
+        var name = '글로벌 변수' // 전역 변수 어디서나 접근 가능
+        function callName(){
+            //var name이 호이스팅 되서 올라감 언디파인 
+            console.log(name);
+            var name = '로컬 변수' // 지역 변수 스코프 내에서만
+        }
+        callName() // undefined
+    </script> -->
+    <script>
+        var name = '글로벌 변수' 
+        function callName(){
+            console.log(name);
+            name = '로컬 변수' // 호이스팅이 안됨 
+        }
+        callName() // 글로벌 변수 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

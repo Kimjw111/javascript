@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호이스팅2</title>
+    <script>
+     // 1. 펑션 안밖에 있을 경우 2. var 과 let 일 경우
+        function fn(){
+            console.log(bb)
+           bb='나는 호이스팅 되었어'
+        }
+        fn()
+        console.log(bb) // error bb is not defined
+
+        var bb
+        function fn(){
+            console.log(bb)
+        }
+        fn()
+        console.log(bb) // undefined undefined
+
+        function fn(){
+            console.log(bb) // undefined
+          var bb='나는 호이스팅 되었어'
+        }
+        fn()
+        console.log(bb) // error
+
+        function fn(){
+            console.log(bb)
+            let bb='나는 호이스팅 되었어'
+        }
+        fn()
+        console.log(bb) // error bb is not undefined
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
