@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        const dog = {
-            name:'wick',
-            age:'7',
-            dna:'shiba',
-            eat:function(food){
-                console.log(`${this.name}은 ${food}를 먹습니다.`)
-                document.write(`<h2 style="border:1px solid black;background-color:red;">${this.name}은 ${food}를 먹습니다.</h2><hr>`)
-            },
-            play:function(playing){
-                console.log(`${this.dna}는 ${this.age}살이고 ${playing}하며 놉니다.`)
-                document.write(`<h2>${this.dna}는 ${this.age}살이고 ${playing}하며 놉니다.</h2><hr>`)
-            },
-            wow:function(bark){
-                console.log(`${this.name}은 ${this.dna}종이고 ${bark}하고 짓습니다.`)
-                document.write(`<h2>${this.name}은 ${this.dna}종이고 ${bark}하고 짓습니다.</h2><hr>`)
-            },
-        }
-        console.log(dog)
-        dog.eat('사료')
-        dog.play('catch ball')
-        dog.wow('왈왈')
+      const dog = {
+        name: "wick",
+        age: "7",
+        dna: "shiba",
+        eat: function (food) {
+          console.log(`${this.name}은 ${food}를 먹습니다.`);
+          document.write(
+            `<h2 style="border:1px solid black;background-color:red;">${this.name}은 ${food}를 먹습니다.</h2><hr>`
+          );
+        },
+        play: function (playing) {
+          console.log(`${this.dna}는 ${this.age}살이고 ${playing}하며 놉니다.`);
+          document.write(
+            `<h2>${this.dna}는 ${this.age}살이고 ${playing}하며 놉니다.</h2><hr>`
+          );
+        },
+        wow: function (bark) {
+          console.log(`${this.name}은 ${this.dna}종이고 ${bark}하고 짓습니다.`);
+          document.write(
+            `<h2>${this.name}은 ${this.dna}종이고 ${bark}하고 짓습니다.</h2><hr>`
+          );
+        },
+      };
+      console.log(dog);
+      dog.eat("사료");
+      dog.play("catch ball");
+      dog.wow("왈왈");
     </script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>

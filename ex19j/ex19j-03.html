@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this와 화살표 함수</title>
+    <script>
+      const obj = {
+        a: function () {
+          setTimeout(function () {
+            //console.log(this.c); // 자기를 감싸고 있는 function안에서 찾음
+            console.log(this.document);
+          }, 0);
+        },
+        b: function () {
+          setTimeout(() => {
+            //console.log(this.c); // 바로 상단에서 찾아서 오브젝트안을 찾음()=>를 건너뜀
+            console.log(this.document);
+          }, 0);
+        },
+        //c: "나야나",
+        document: "나야나",
+      };
+      //obj.a(); // undefined
+      //obj.b(); // 나야나
+      obj.a(); // #document
+      obj.b(); // 나야나
+    </script>
+  </head>
+  <body></body>
+</html>

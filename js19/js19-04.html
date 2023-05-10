@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const test = {
+        a: function () {
+          console.log(this); // 익명함수로 선언
+        },
+        b: () => {
+          console.log(this); // 화살표함수로 선언
+        },
+      };
+      test.a(); // object 현재 코드에서 test 객체를 출력
+      test.b(); // window window 객체를 출력
+    </script>
+  </head>
+  <body></body>
+</html>
