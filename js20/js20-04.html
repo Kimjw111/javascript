@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로토타입 연습</title>
+    <script>
+      String.prototype.ck = function (data) {
+        return this.indexOf(data) >= 0
+          ? `${this.indexOf(data) + 1}번째 있어요~^^`
+          : "없네요~ㅜㅜ"; // 삼항연산자 ?를 기점으로 앞의 값은 true일때 뒤에 값은 false일때
+      };
+      const str = "안녕하세요"; // String 객체의 ck() 메소드 사용
+      console.log(str.ck("하세"));
+      console.log(str.ck("몰라"));
+
+      Array.prototype.contain = function (data) {
+        return this.indexOf(data) >= 0
+          ? `${this.indexOf(data)}번째 있어요~^^`
+          : "없네요~ㅜㅜ";
+      };
+      const b = [273, 32, 103, 57, 52]; // Array 객체의 contain() 메소드 사용
+      console.log(b.contain(273));
+      console.log(b.contain(0));
+    </script>
+  </head>
+  <body></body>
+</html>

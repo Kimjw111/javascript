@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const m = Number("숫자로 변환할 수 없는 경우");
+      console.log(m); // NaN
+      console.log(m === NaN); // false NaN과 비교해서는 알 수 없음
+      console.log(Number.isNaN(m)); // true
+
+      const n = 10 / 0;
+      console.log(n); // Infinity 양의 무한대
+      const o = -10 / 0;
+      console.log(o); // -Infinity 음의 무한대
+      console.log(Number.isFinite(n)); // false isFinite 유한한 수인지 물어봄
+      console.log(Number.isFinite(o)); // false
+      console.log(Number.isFinite(1)); // true
+      console.log(Number.isFinite(10)); // true
+    </script>
+  </head>
+  <body></body>
+</html>
