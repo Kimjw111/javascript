@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메소드</title>
+    <script>
+      let str1 = "     안 녕하세요     ";
+      console.log(str1.trim()); // 안 녕하세요 trim은 전과 후에 있는 공백을 없애줌 문자안에서 띄어쓰기는 안없앰
+      console.log(str1); //      안 녕하세요
+
+      let str2 = "a,b,c,d,e,f,g,h";
+      let str2A = str2.split(","); // 문자를 배열로
+      console.log(str2, str2A); // a,b,c,d,e,f,g,h (8) ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+
+      const str = "오늘 학교에서 시험을 아주 잘 쳤어요.";
+      const st1A = str.split(" ");
+      console.log(str, st1A); // 오늘 학교에서 시험을 아주 잘 쳤어요. (6) ['오늘', '학교에서', '시험을', '아주', '잘', '쳤어요.']
+
+      const str4 = `내가 만약
+             나비라면
+             훨훨
+             날아갈텐데...
+      `;
+      const str4A = str4.split("\n");
+      console.log(str4A); // (5) ['내가 만약', '             나비라면', '             훨훨', '             날아갈텐데...', '      ']
+
+      for (i in str4A) {
+        str4A[i] = str4A[i].trim(); // 요소 하나하나에 적용
+      }
+      console.log(str4A); // (5) ['내가 만약', '나비라면', '훨훨', '날아갈텐데...', '']
+
+      const arr = str4A.map((v) => v.trim());
+      console.log(arr); // (5) ['내가 만약', '나비라면', '훨훨', '날아갈텐데...', '']
+    </script>
+  </head>
+  <body></body>
+</html>
