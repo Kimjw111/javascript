@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+      const books = [
+        {
+          name: "혼자 공부하는 파이썬",
+          price: 18000,
+          publisher: "한빛미디어",
+        },
+        {
+          name: "HTML5 웹 프로그래밍 입문",
+          price: 26000,
+          punlisher: "한빛아카데미",
+        },
+        {
+          name: "머신러닝 딥러님 실전 개발 입문",
+          price: 30000,
+          publisher: "위키북스",
+        },
+        {
+          name: "딥러닝을 위한 수학",
+          price: 26000,
+          publisher: "위키북스",
+        },
+      ];
+      //가격으로 정렬한 뒤 출력
+      //책예제
+      // const output = _.sortBy(book, (book) => book.price);
+      // console.log(JSON.stringify(output, null, 2));
+
+      //예제2
+      const arr1 = _.orderBy(books, ["name", "asc"]); //ascending 오름차순 descending 내림차순
+      const arr2 = _.orderBy(books, (x) => x.name);
+      const arr3 = _.orderBy(books, ["price", "name"], ["desc", "asc"]); // 가격은 내림차순 같은거 있으면 이름은 오름차순
+      console.log(arr1);
+      console.log(arr2);
+      console.log(arr3);
+    </script>
+  </head>
+  <body></body>
+</html>
