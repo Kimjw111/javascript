@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelectorAll("h1");
+        for (let i = 0; i < header.length; i++) {
+          /*   if ((i + 1) % 2 == 0) {
+               header[i].innerHTML = `<h1 style="color:red">${i + 1}</h1>`;
+             } else header[i].innerHTML = `<h1 style="color:blue">${i + 1}</h1>`;
+           */
+          header[i].innerHTML = `<em>${i + 1}</em>`;
+          if (i % 2 == 0) header[i].style.color = "blue";
+          else header[i].style.color = "red";
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+  </body>
+</html>
