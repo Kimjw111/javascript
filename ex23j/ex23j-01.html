@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const d1 = document.createElement("div");
+        const d2 = document.createElement("div");
+        d1.setAttribute("class", "d1");
+        d2.setAttribute("class", "d2");
+        const h1 = document.createElement("h1");
+        const span = document.createElement("span");
+        const a = document.createElement("a");
+        a.setAttribute("href", "http://www.google.com"); // a태그에 href 하이퍼링크 속성추가
+        span.setAttribute("id", "s1");
+        span.style.color = "blue";
+        //span.setAttribute('style','blue')
+        document.body.appendChild(d1);
+        document.body.appendChild(d2);
+        d1.appendChild(h1); // 디브를 바디에 쓰고 디브 밑에 있는 태그는 body안쓰고 바로 부모태그.appendChild
+        d2.appendChild(a); // div아래 a태그가 있고
+        h1.textContent = "저를 자바스크립트로 작성해 주세요.";
+        span.textContent = "아주 감사합니다!";
+        a.appendChild(span); // a아래 span이 있으면 span으로 나온 값 누르면 하이퍼링크 실행 가능
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

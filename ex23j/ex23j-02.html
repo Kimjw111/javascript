@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const c1 = document.createElement("div");
+        const c2 = document.createElement("div");
+        c1.setAttribute("class", "c1");
+        c2.setAttribute("class", "c2");
+        const span1 = document.createElement("span");
+        const span2 = document.createElement("span");
+        span1.textContent = "1.문서객체 생성하기";
+        span2.textContent = "그리고 추가하기";
+        document.body.appendChild(c1);
+        c1.appendChild(span1);
+        c1.appendChild(span2);
+        document.body.appendChild(c2);
+        const ol = document.createElement("ol");
+        const l1 = document.createElement("li");
+        const l2 = document.createElement("li");
+        const l3 = document.createElement("li");
+        l1.textContent = "생성하고(장전)";
+        l2.textContent = "추가하고(겨냥)";
+        l3.textContent = "문서읽고(격발)";
+        document.body.appendChild(c2);
+        c2.appendChild(ol);
+        ol.appendChild(l1);
+        ol.appendChild(l2);
+        ol.appendChild(l3);
+        const span3 = document.createElement("span");
+        const span4 = document.createElement("span");
+        const a1 = document.createElement("a");
+        const a2 = document.createElement("a");
+        a1.textContent = "네이버";
+        a2.textContent = "다음";
+        a1.setAttribute("href", "http://naver.com");
+        a2.setAttribute("href", "http://daum.net");
+        document.body.appendChild(span3);
+        document.body.appendChild(span4);
+        span3.appendChild(a1);
+        span4.appendChild(a2);
+        const br = document.createElement("br");
+        span3.appendChild(br);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
