@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자수세기</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const textarea = document.createElement("textarea");
+        const h1 = document.createElement("h1");
+        document.body.append(h1, textarea);
+        textarea.setAttribute("cols", 30);
+        textarea.setAttribute("rows", 10);
+        h1.textContent = `글자 수: 0`;
+        textarea.addEventListener("keyup", () => {
+          // keydown ㅋㅋㅋ같은 거 인식 안됨, keypress 띄어쓰기나 엔터해야 인식 한글과의 호환성
+          const length = textarea.value.length;
+          h1.textContent = `글자 수: ${length}`;
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

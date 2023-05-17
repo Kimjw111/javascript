@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.querySelector("h1");
+        const key= event.key||event.keyCode
+        const print = (event) => {
+          let output = "";
+          output += `alt: ${event.altKey}<br>`; // 이벤트가 발생하면 불 값을 반환
+          output += `ctrl: ${event.ctrlKey}<br>`;
+          output += `shfit: ${event.shiftKey}<br>`;
+          output += `code: ${
+            typeof (event.code) !== "undefined" ? event.code : key
+          }<br>`; // 이벤트 코드가 있으면 이벤트 코드를 출력하고 undefined면 event.keyCode를 출력
+          h1.innerHTML = output;
+        };
+        document.addEventListener("keydown", print); // 키가 눌릴 때 출력
+        document.addEventListener("keyup", print); // 키가 떨어질 때 출력
+      });
+      /* code: 입력한 키
+        keyCode: 입력한 키를 나타내는 숫자
+        altKey: alt키를 눌렸는지
+        ctrlKey: ctrl키를 눌렸는지
+        shiftKey: shift키를 눌렸는지*/
+    </script>
+  </head>
+  <body>
+    <h1></h1>
+  </body>
+</html>
