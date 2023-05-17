@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 연결 제거하기(body내용생략) p.324</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let counter = 0;
+        let isConnect = false;
+        const h1 = document.createElement("h1");
+        const p = document.createElement("p");
+        const connectButton = document.createElement("button");
+        const disconnectButton = document.createElement("button");
+        h1.textContent = `클릭 횟수: ${counter}`;
+        h1.style.userSelect = "none";
+        p.textContent = "이벤트 연결 상태 해제";
+        connectButton.textContent = "이벤트 연결";
+        disconnectButton.textContent = "이벤트 제거";
+        connectButton.setAttribute("id", "connect");
+        disconnectButton.setAttribute("id", "disconnect");
+        document.body.append(h1, connectButton, disconnectButton, p);
+        const listener = (event) => {
+          h1.textContent = `클릭 횟수: ${counter++}`;
+        };
+        connectButton.addEventListener("click", () => {
+          if (isConnect === false) {
+            h1.addEventListener("click", listener);
+            p.textContent = "이벤트 연결 상태: 연결";
+            isConnect = true;
+          }
+        });
+        disconnectButton.addEventListener("click", () => {
+          if (isConnect === true) {
+            h1.removeEventListener("click", listener);
+            p.textContent = "이벤트 연결 상태: 해제";
+            isConnect = false;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

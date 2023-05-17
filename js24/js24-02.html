@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 객체 이동하기(body 생략)</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const divA = document.createElement("div");
+        const divB = document.createElement("div");
+        divA.setAttribute("id", "first");
+        divB.setAttribute("id", "second");
+        const a1 = document.createElement("h1");
+        const a2 = document.createElement("h1");
+        const hr = document.createElement("hr");
+        a1.textContent = "첫 번째 div 태그 내부";
+        a2.textContent = "두 번째 div 태그 내부";
+        document.body.appendChild(divA);
+        document.body.appendChild(hr);
+        document.body.appendChild(divB);
+        divA.appendChild(a1);
+        divB.appendChild(a2);
+        const h1 = document.createElement("h1");
+        h1.textContent = "이동하는 h1 태그";
+        const toFirst = () => {
+          divA.appendChild(h1);
+          setTimeout(toSecond, 1000);
+        };
+        const toSecond = () => {
+          divB.appendChild(h1);
+          setTimeout(toFirst, 1000);
+        };
+        toFirst();
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

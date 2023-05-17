@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 설정하기 p323(body 내용생략)</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let counter = 0;
+        const h1 = document.createElement("h1");
+        h1.style.userSelect = "none";
+        h1.style.border = "2px solid black";
+        h1.style.height = "200px";
+        h1.style.width = "200px";
+        h1.style.backgroundColor = "red";
+        h1.style.color = "white";
+        document.body.appendChild(h1);
+        h1.innerHTML = `클릭 횟수: ${counter}`; // 클릭 해주려는 트리거가 되는 h1 태그가 존재해야 함
+        h1.addEventListener("click", (event) => {
+          counter++;
+          h1.textContent = `클릭 횟수: ${counter}`;
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
