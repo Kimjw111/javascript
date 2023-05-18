@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener('DOMContentLoaded',()=>{
+            const input=document.querySelector('input')
+            const button=document.querySelector('button')
+            const p=document.querySelector('p')
+            button.addEventListener('click',()=>{
+                const dollar=Number(input.value)
+                if(isNaN(dollar)){
+                    p.textContent='숫자를 입력해주세요'
+                    return
+                }
+                const won=dollar*1300
+                p.textContent=`${won}원`
+            })
+        })
+    </script>
+  </head>
+  <body>
+    <input type="text">달러</input>
+    <button>환전</button>
+    <p></p>
+</html>

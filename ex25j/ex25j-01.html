@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        for (let i = 0; i < 5; i++) {
+          const imgs = document.createElement("img");
+          document.body.appendChild(imgs);
+          const width = (i + 1) * 100;
+          const src = `http://placekitten.com/${width}/${width}`;
+          imgs.setAttribute("src", src);
+          imgs.addEventListener("contextmenu", (event) => {
+            event.preventDefault(); // 사진 우클릭 안되게 하는거
+          });
+        } // 같은 이름으로 여러개 만들어 짐 for안에서 속성 등 다 넣어서 만들어짐
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

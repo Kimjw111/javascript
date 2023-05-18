@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        //별의 초기 설정
+        const star = document.createElement("h1");
+        star.textContent = "★";
+        document.body.appendChild(star);
+        star.style.position = "absolute";
+        //별의 이동 출력
+        let [x, y] = [0, 0];
+        const block = 20;
+        const print = () => {
+          star.style.left = `${x * block}px`;
+          star.style.top = `${y * block}px`;
+        };
+        print();
+        //별을 이동하는 기능
+        document.body.addEventListener("keydown", (event) => {
+          switch (event.key) {
+            case "ArrowLeft":
+              x -= 1;
+              break;
+            case "ArrowUp":
+              y -= 1;
+              break;
+            case "ArrowRight":
+              x += 1;
+              break;
+            case "ArrowDown":
+              y += 1;
+              break;
+              break;
+          }
+          print();
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

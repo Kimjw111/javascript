@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const star = document.createElement("h1");
+        const circle = document.createElement("h1");
+        const score = document.createElement("p");
+        let ct = 0;
+        score.textContent = "점수: 0개";
+        circle.textContent = "●";
+        star.textContent = "★";
+        document.body.appendChild(circle);
+        document.body.appendChild(score);
+        document.body.appendChild(star);
+        star.style.position = "absolute";
+        circle.style.position = "absolute";
+        let [a, b] = [
+          Math.floor(Math.random() * 50),
+          Math.floor(Math.random() * 25),
+        ];
+        let [x, y] = [0, 0];
+        const block = 20;
+        const print = () => {
+          star.style.left = `${x * block}px`;
+          star.style.top = `${y * block}px`;
+        };
+        const print2 = () => {
+            circle.style.left = `${a * block}px`;
+            circle.style.top = `${b * block}px`;
+        };
+        print();
+        print2();
+        document.body.addEventListener("keydown", (event) => {
+          switch (event.key) {
+            case "ArrowLeft":
+              x -= 1;
+              break;
+            case "ArrowUp":
+              y -= 1;
+              break;
+            case "ArrowRight":
+              x += 1;
+              break;
+            case "ArrowDown":
+              y += 1;
+              break;
+          }
+          print();
+          if (x == a && y == b) {
+            document.body.removeChild(circle);
+            score.textContent = `점수: ${(++ct)}개`;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

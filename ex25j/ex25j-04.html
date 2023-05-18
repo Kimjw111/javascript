@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getElemntBy</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const all = document.querySelectorAll("div"); //자동 속도가 느림 편의성이 좋음
+        const c1 = document.querySelector(".c1"); //자동 속도가 느림 편의성이 좋음
+        const i1 = document.querySelector("#i1");
+        const tag = document.getElementsByTagName("div");
+        const name = document.getElementsByName("text1");
+        const c2 = document.getElementsByClassName("c2"); //수동 속도가 빠름 편이성이 별로
+        const i2 = document.getElementById("i2"); //s가 붙으면 배열로 안 붙으면 단독으로
+        console.log(all);
+        console.log(c1);
+        console.log(i1);
+        console.log(tag);
+        console.log(name);
+        console.log(c2);
+        console.log(i2);
+        /*선택자
+        queryselector(' ')
+        queryselectorAll(' ') -> nodelist 유사배열화
+        getElementBy~
+        getElementsBy~ -> HTMLCollection 이름의 유사배열
+        node 유사배열은  foreach사용가능 
+        HTML유사배열은 foreach사용불가 둘다 lenght는 사용가능
+        getElementsByName은 foreach사용가능 */
+      });
+    </script>
+  </head>
+  <body>
+    <div class="c1">
+      <div id="i1"></div>
+    </div>
+    <div class="c2">
+      <div id="i2"></div>
+    </div>
+    <div class="c2"></div>
+    <textarea name="text1" id="" cols="30" rows="10"></textarea>
+  </body>
+</html>
