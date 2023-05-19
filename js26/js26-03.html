@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const select = document.createElement("select");
+        const p = document.createElement("p");
+        const option = document.createElement("option");
+        const option1 = document.createElement("option");
+        const option2 = document.createElement("option");
+        const option3 = document.createElement("option");
+        p.textContent = "선택: ";
+        option.textContent = "떡볶이";
+        option1.textContent = "순대";
+        option2.textContent = "오뎅";
+        option3.textContent = "튀김";
+        document.body.appendChild(select);
+        select.appendChild(option);
+        select.appendChild(option1);
+        select.appendChild(option2);
+        select.appendChild(option3);
+        document.body.appendChild(p);
+        select.addEventListener("change", (event) => {
+          const options = event.currentTarget.options;
+          const index = event.currentTarget.options.selectedIndex;
+          p.textContent = `선택: ${options[index].textContent}`;
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
