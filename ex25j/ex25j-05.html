@@ -17,7 +17,8 @@
                     return
                 }
                 const won=dollar*1300
-                p.textContent=`${won}원`
+                const lo=won.toLocaleString('ko-KR')
+                p.textContent=`${lo}원`
             })
         })
     </script>
