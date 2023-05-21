@@ -11,15 +11,17 @@
       const input = document.getElementById('number')
       const input1 = document.getElementById('text')
       const p = document.querySelector('p')
-      document.addEventListener('keydown', (event) => {
-        const cm = Number(event.key)
-        console.log(event)
-        const m = cm * 100
-        const mm = cm / 100
+      document.addEventListener('keyup', (event) => {
+        const a= Number(input.value)
+        const cm = a * 100
+        const b=Number(input1.value)
+        const m=b/100
+        console.log(a,cm,b,m)
         if (event.target.id == 'number') {
           input1.value = `${m}`
-        } else {
-          input.value = `${mm}`
+        } 
+        if(event.target.id=='text') {
+          input.value = `${m}`
         }
       })
     })
