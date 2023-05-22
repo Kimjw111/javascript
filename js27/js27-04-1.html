@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>할 일 목록</title>
+    <script>
+      document,
+        addEventListener("DOMContentLoaded", () => {
+          /* DOM 구성*/
+          const h1 = document.createElement("h1");
+          const input = document.createElement("input");
+          const button = document.createElement("button");
+
+          document.body.append(h1, input, button);
+          h1.innerHTML = "할 일 목록";
+          input.setAttribute("id", "todo");
+          input.style.height = "30px";
+          input.style.marginRight = "10px";
+          button.innerHTML = "추가하기";
+
+          /*입력한 부분 변수로 받기*/
+          let content = "";
+          input.addEventListener("change", (e) => {
+            content = e.target.value; //input에 친 값이 변화할때 마다 반응
+          });
+
+          /*동작 1단계*/
+          button.addEventListener("click", (e) => {
+            if (content) {
+            }
+          });
+        });
+    </script>
+  </head>
+  <body></body>
+</html>
