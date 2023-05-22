@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.createElement("h1");
+        document.body.appendChild(h1);
+        h1.textContent = "반갑습니다. 감사합니다.";
+
+        new TypeIt(h1) // .~~로 차례로 진행하게 해놈
+          .pause(1000) //멈춘다 1초간
+          .delete(6, { delay: 1000 }) //6글자 지우고(점.포함) 1초 기다림
+          .type("고맙습니다!!!") // 새로 작성하고
+          .go(); //실행한다.
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
