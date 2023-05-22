@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+        button.addEventListener("click", (event) => {
+          const br = document.createElement("br");
+          const item = document.createElement("input");
+          item.type = "checkbox";
+          const span = document.createElement("span");
+          span.textContent = input.value;
+          const button1 = document.createElement("button");
+          button1.textContent = "제거하기";
+          document.body.append(br, item, span, button1);
+          item.addEventListener("change", (event) => {
+            span.style.textDecoration = "line-through"; // 줄 긋는 css
+          });
+          button1.addEventListener("click", (event) => {
+            document.body.removeChild(br);
+            document.body.removeChild(item);
+            document.body.removeChild(span);
+            document.body.removeChild(button1);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>할 일 목록</h1>
+    <input type="text" /><button>추가하기</button>
+  </body>
+</html>
