@@ -5,7 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const h3f = document.createElement("h3");
+        const hr = document.createElement("hr");
+        const h3l = document.createElement("h3");
+        document.body.appendChild(h3f);
+        const ani = [
+          "강아지",
+          "고양이",
+          "앵무새",
+          "거북이",
+          "토끼",
+          "다람쥐",
+          "호랑이",
+          "사자",
+        ];
+        for (let an of ani) {
+          const input = document.createElement("input");
+          const span = document.createElement("span");
+          document.body.append(input, span);
+          input.type = "radio";
+          input.name = "pet"; // for안에서 돌리면 인풋들이 다 name이 같아짐 name이 같으면 radio는 1개만 선택할 수 있음
+          input.value = an; // input의 값이 선택이 됬을때 나오는 값
+          span.innerHTML = an + "&nbsp&nbsp&nbsp"; //&nbsp: 공백
+          input.addEventListener("change", (e) => {
+            const choice = e.currentTarget;
+            h3l.innerHTML = `좋아하는 애완동물은 ${choice.value}이시군요!!!`;
+          });
+        }
+        h3l.innerHTML = "#좋아하는 애완동물을 선택해 주세요.";
+        document.body.append(hr, h3l);
+      });
+    </script>
   </head>
   <body></body>
 </html>
