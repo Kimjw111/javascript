@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>할 일 목록</title>
+    <style>
+      .check-ok {
+        text-decoration: line-through;
+        color: gray;
+      }
+      .check-no {
+        text-decoration: none;
+        color: #000;
+      }
+    </style>
+    <script>
+      document,
+        addEventListener("DOMContentLoaded", () => {
+          /* DOM 구성*/
+          const h1 = document.createElement("h1");
+          const input = document.createElement("input");
+          const button = document.createElement("button");
+          const delall = document.createElement("button");
+          document.body.append(h1, input, button, delall);
+          h1.innerHTML = "할 일 목록";
+          input.setAttribute("id", "todo");
+          input.style.height = "30px";
+          input.style.marginRight = "10px";
+          button.innerHTML = "추가하기";
+          delall.innerHTML = "모두삭제";
+
+          /*입력한 부분 변수로 받기*/
+          let content = ""; // 밖에서 let 지정해주고 안에서 값을 넣음 안에서 let 지정하면 밖에서 사용 불가
+          input.addEventListener("change", (e) => {
+            content = e.target.value; //input에 친 값이 변화할때 마다 반응
+          });
+
+          /*동작 1단계*/
+          ct = 0; //타겟 넘버링
+          button.addEventListener("click", (e) => {
+            if (content) {
+              ct++;
+
+              const div = document.createElement("div"); // 디브 안에 태그 넣어서 포장
+              const check = document.createElement("input");
+              const span = document.createElement("span");
+              const btn = document.createElement("button");
+              document.body.appendChild(div);
+              btn.innerHTML = "삭제하기";
+              div.append(check, span, btn);
+              // check.setAttribute("class", ct);
+              check.className = ct++;
+              check.setAttribute("type", "checkbox");
+              span.innerHTML = content;
+              input.value = ""; //자바스크립트 내부에 입력된 input값 비워주기
+              content = ""; //입력해서 추가하고 입력한 내용 비워주기 더블클릭 방지
+              /*체크 방법 1*/
+              // check.addEventListener("change", (e) => {
+              //   if (e.currentTarget.checked) {
+              //     //체크 됬을때
+              //     span.style.textDecoration = "line-through"; //줄긋기
+              //   } else {
+              //     //체크 안됬을때
+              //     span.style.textDecoration = "none";
+              //   }
+              // });
+              /*체크 방법 2*/
+              check.addEventListener("change", (e) => {
+                if (e.currentTarget.checked) {
+                  span.className = "check-ok"; //클래스 이름을 지정
+                } else {
+                  span.className = "check-no";
+                }
+              });
+              btn.addEventListener("click", (e) => {
+                if (span.className == "check-ok")
+                  document.body.removeChild(div);
+              });
+              delall.addEventListener("click", (e) => {
+                document.body.removeChild(div);
+              });
+            } else {
+              alert("내용을 입력하세요!");
+            }
+          });
+        });
+    </script>
+  </head>
+  <body></body>
+</html>
