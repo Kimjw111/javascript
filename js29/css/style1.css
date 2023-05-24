@@ -1,0 +1,64 @@
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .check-ok {
+    text-decoration: line-through;
+    color: rgb(255, 0, 0);
+  }
+  .check-no {
+    text-decoration: none;
+    color: #f8f7a6;
+  }
+  .main {
+    height: 50%;
+    min-width: 50%;
+    background-color: aquamarine;
+    text-align: center;
+    color: gold;
+    border-radius: 5px;
+    padding-bottom: 10px;
+  }
+  button{
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+  }
+  button:hover{
+    background-color: grey;
+    color: wheat;
+  }
+  input{
+    border-radius: 5px;
+    background-color: gainsboro;
+  }
+  input:hover{
+    transition: transform 1s ease;
+    transform: scale(1.1);
+  }
+  .container{
+    height: 35px;
+    width: 40%;
+    background-color: pink;
+    text-align: center;
+    color: wheat;
+    position: relative;
+    left: 30%;
+    margin: 15px 0;
+    padding-top: 10px;
+    transition: transform 1s linear;
+    border-radius: 5px;
+  }
+  .addbtn{
+    border-radius:5px;
+    background-color: blue;
+  color: yellow
+  }
+.addbtn:hover{
+  transition: transform 1s ease;
+  transform: scale(0.7);
+}
+.container:hover{
+  transform: skewX(-20deg);
+}
