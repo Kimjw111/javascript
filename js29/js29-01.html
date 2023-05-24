@@ -71,7 +71,11 @@
                 main.removeChild(div);
               } else {
                 h1.textContent = "체크박스를 체크해 주세요.";
-                new TypeIt(h1).go();
+                new TypeIt(h1)
+                  .pause(2000)
+                  .delete(14, { delay: 1000 })
+                  .type("할 일을 추가 해 주세요!!!")
+                  .go();
               }
             });
             delall.addEventListener("click", () => {
