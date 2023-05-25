@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열 CRUD(localstorage)</title>
+    <style>
+      button {
+        margin: 5px;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p1 = document.createElement("p");
+        const p2 = document.createElement("p");
+        const input = document.createElement("input");
+        const add = document.createElement("button");
+        const pop = document.createElement("button");
+        const del = document.createElement("button");
+        const fix = document.createElement("button");
+        const sort = document.createElement("button");
+        document.body.append(input, add, pop, fix, sort, del, p1, p2);
+        add.innerHTML = "추가";
+        pop.innerHTML = "제거";
+        fix.innerHTML = "중복제거";
+        sort.innerHTML = "정렬";
+        del.innerHTML = "요소모두삭제";
+        // let arr;
+        // localStorage.getItem("arr1") === null
+        //   ? (arr = [])
+        //   : (arr = localStorage.getItem("arr1").split(","));
+        let arr = localStorage.getItem("arr1")?.split(".") ?? []; //?.옵셔널 체이닝 ??널리싱
+        let vin = "";
+        p2.innerHTML = arr;
+        input.addEventListener("keyup", (e) => {
+          vin = e.currentTarget.value;
+          //인풋에 입력한 값이 실시간으로 저장하게
+        });
+        add.addEventListener("click", (e) => {
+          if (vin) {
+            arr.push(vin); // 입력 받은 값을 배열에 넣고
+            p1.innerHTML = vin + "의 값을 추가 하엿습니다.";
+            p2.innerHTML = arr; //넣은 값의 배열을 보여준다.
+            vin = ""; //버튼 누르고 또 눌렀을때 안넣게 하기
+            input.value = ""; //값 넣고나서 인풋자리 비우기
+            localStorage.setItem("arr1", arr);
+          } else {
+            p1.innerHTML = "<em>값을 넣으세요!!</em>";
+          }
+        });
+        pop.addEventListener("click", (e) => {
+          const pp = arr.pop(vin); //배열에서 값 제거하기
+          p1.innerHTML = pp
+            ? `${pp}값을 제거 하였습니다.`
+            : `배열이 비었습니다.`; //:을 기준으로 앞은 true일때 뒤는 false일때
+          p2.innerHTML = arr;
+          vin = "";
+          input.value = "";
+        });
+        fix.addEventListener("click", (e) => {
+          const arrs = new Set(arr);
+          arr = [...arrs]; // = Array.from(arrs); 배열로 바꾸든 전개연산자로 풀든
+          p1.innerHTML = "중복 제거 완료";
+          p2.innerHTML = arr;
+          vin = "";
+          input.value = "";
+        });
+        sort.addEventListener("click", (e) => {
+          arr.sort((a, b) => a - b);
+          p1.innerHTML = "배열 정렬 완료";
+          p2.innerHTML = arr;
+          vin = "";
+          input.value = "";
+        });
+        del.addEventListener("click", (e) => {
+          arr = []; // arr.length=0
+          p1.innerHTML = "배열 모두 삭제 됨";
+          p2.innerHTML = arr;
+          vin = "";
+          input.value = "";
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
