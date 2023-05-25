@@ -9,8 +9,9 @@
       const test = undefined;
       console.log(test?.data); //?앞에것 실행하고 .뒤에는 에러가 나면 실행 안함
 
-      const obj = { 딸기: undefined };
-      const reslut = obj && obj.바나나;
+      const obj = { 딸기: "맛있다", 수박: "달다" };
+      const reslut = obj.바나나?.length; //undefined
+      // const reslut = obj.바나나.length;//error
       console.log(reslut);
     </script>
   </head>
