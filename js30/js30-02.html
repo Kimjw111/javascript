@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localStorage</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = document.querySelector("p");
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+        const savedValue = localStorage.getItem("input"); //값을 읽을때 getItem()메소드 사용
+        //localStorage.input
+        if (savedValue) {
+          input.value = savedValue;
+          p.textContent = `이전 실행 때의 마지막 값: ${savedValue}`;
+        }
+        input.addEventListener("keyup", (event) => {
+          const value = event.currentTarget.value;
+          localStorage.setItem("input", value); //값을 저장할때는 setItem()메소드 사용
+          //localStorage.input=value
+        });
+        button.addEventListener("click", (event) => {
+          localStorage.clear(); //값을 모두 제거할 때는 clear()메소드 사용
+          input.value = "";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <button>지우기</button>
+    <input type="text" />
+  </body>
+</html>
