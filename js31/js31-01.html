@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>예외처리</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.querySelector("h1");
+        if (h1) {
+          h1.textContent = "안녕하세요";
+        } else {
+          console.log("h1 태그가 없어요");
+        } //h1 태그가 없어요
+      });
+    </script>
+  </head>
+  <body>
+    <!-- console.log("괄호를 닫지 않았습니다."
+ Uncaught SyntaxError: missing ) after argument list
+console.rog('오타내보기')
+ Uncaught TypeError: console.rog is not a function
+    at <anonymous>:1:9 -->
+  </body>
+</html>

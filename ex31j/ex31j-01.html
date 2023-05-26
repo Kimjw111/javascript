@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>에러</title>
+    <script>
+      function add(a, b) {
+        console.log("if 전");
+        if (a == b || b == 0) {
+          console.log("에러 전");
+          throw "a와 b를 같지 않게 해주세요."; //에러 발생시 throw 이후 코드 실행 안함
+          console.log("에러 후");
+          /*add(3,4): 7
+        add(4,4): ex31j-01.html:11 Uncaught a와 b를 같지 않게 해주세요.*/
+        }
+        console.log("if 후");
+        /*add(4,4): if 전
+                    에러 전
+            ex31j-01.html:13 Uncaught a와 b를 같지 않게 해주세요.*/
+        return a + b;
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
