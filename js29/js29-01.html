@@ -39,6 +39,7 @@
 
         /*동작 1단계*/
         ct = 0; //타겟 넘버링
+        let arr = [];
         button.addEventListener("click", (e) => {
           if (content) {
             ct++;
@@ -57,6 +58,8 @@
             check.className = ct++;
             check.setAttribute("type", "checkbox");
             span.innerHTML = content;
+            arr.push(content);
+            localStorage.setItem("date", arr);
             input.value = ""; //자바스크립트 내부에 입력된 input값 비워주기
             content = ""; //입력해서 추가하고 입력한 내용 비워주기 더블클릭 방지
             check.addEventListener("change", (e) => {
@@ -80,6 +83,7 @@
             });
             delall.addEventListener("click", () => {
               location.reload();
+              localStorage.clear();
             });
           } else {
             alert("내용을 입력하세요!");
