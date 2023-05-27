@@ -25,22 +25,29 @@
         button.innerHTML = "추가하기";
         delall.innerHTML = "모두삭제";
         button.style.marginRight = "5px";
+        
         /*typeit*/
         new TypeIt(h1)
           .pause(2000)
           .delete(6, { delay: 1000 })
           .type("할 일을 추가 해 주세요!!!")
           .go();
-        /*입력한 부분 변수로 받기*/
+        
+          /*입력한 부분 변수로 받기*/
         let content = ""; // 밖에서 let 지정해주고 안에서 값을 넣음 안에서 let 지정하면 밖에서 사용 불가
         input.addEventListener("change", (e) => {
           content = e.target.value; //input에 친 값이 변화할때 마다 반응
         });
-
+        
+        
         /*동작 1단계*/
         ct = 0; //타겟 넘버링
         button.addEventListener("click", (e) => {
           if (content) {
+            let arr=[]
+            let users = {id :ct , data: content, flag:false};
+            arr.push(JSON.stringify(users))
+            localStorage.setItem(ct,arr)
             ct++;
             const div = document.createElement("div"); // 디브 안에 태그 넣어서 포장
             div.setAttribute("class", "container");
@@ -54,21 +61,42 @@
             btn.innerHTML = "삭제하기";
             main.appendChild(div);
             div.append(check, span, btn);
-            check.className = ct++;
+            btn.id=ct-1
+            check.id=ct-1
+            check.className = ct;
             check.setAttribute("type", "checkbox");
             span.innerHTML = content;
             input.value = ""; //자바스크립트 내부에 입력된 input값 비워주기
             content = ""; //입력해서 추가하고 입력한 내용 비워주기 더블클릭 방지
             check.addEventListener("change", (e) => {
               if (e.currentTarget.checked) {
+               let a=localStorage.getItem(e.target.id)
+               //key값입니다.   
+               let b=Number(a.substring(a.indexOf(':')+1 , a.indexOf(',') ))
+               //localstorage.getitem안에 속성 사용가능
+               let c=a.substring(a.indexOf('data')+7 , a.indexOf('flag')-3 )
+               //substring 파라미터를 두개 받음>지역을 한정적으로 잘라서 쓸떄(하나만 받을수도 있음)
+               let arr=[]
+               let users = {id :b , data: c, flag:true};
+               arr.push(JSON.stringify(users))
+              localStorage.setItem(e.target.id,arr)
                 span.className = "check-ok"; //클래스 이름을 지정
               } else {
+                let a=localStorage.getItem(e.target.id)   
+               let b=Number(a.substring(a.indexOf(':')+1 , a.indexOf(',') )) 
+               let c=a.substring(a.indexOf('data')+7 , a.indexOf('flag')-3 ) 
+               let arr=[]
+               let users = {id :b , data: c, flag:false};
+               arr.push(JSON.stringify(users))
+              localStorage.setItem(e.target.id,arr)
                 span.className = "check-no";
               }
+              
             });
-            btn.addEventListener("click", () => {
+            btn.addEventListener("click", (e) => {
               if (span.className == "check-ok") {
                 main.removeChild(div);
+                localStorage.removeItem(e.target.id)
               } else {
                 h1.textContent = "체크박스를 체크해 주세요.";
                 new TypeIt(h1)
@@ -78,13 +106,15 @@
                   .go();
               }
             });
-            delall.addEventListener("click", () => {
-              location.reload();
-            });
+            
           } else {
             alert("내용을 입력하세요!");
           }
         });
+        delall.addEventListener("click", () => {
+              location.reload();
+              localStorage.clear()
+            });
       });
     </script>
   </head>
