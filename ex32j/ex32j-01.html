@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function test() {
+        try {
+          console.log("a입니다."); //a입니다.
+          throw "강제예외";
+        } catch (e) {
+          console.log("b입니다. 에러가 났네요.", e); //b입니다. 에러가 났네요. 강제예외
+          return; //함수를 종료시키고 빠져나감
+        } finally {
+          console.log("c입니다."); //c입니다. finally내용 무조건 나옴 return으로 함수가 종료되도...
+        }
+      }
+      test();
+    </script>
+  </head>
+  <body></body>
+</html>
