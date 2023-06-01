@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const User = class Myclass {
+        constructor() {}
+        hi() {
+          console.log(Myclass); //함수 내부에서 사용
+          /*Myclass
+VM205:1 Uncaught ReferenceError: Myclass is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM205:1
+Myclass()
+VM250:1 Uncaught ReferenceError: Myclass is not defined
+    at <anonymous>:1:1*/
+
+          /*new User().hi()
+ex34j-02.html:12 class Myclass {
+        constructor() {}
+        hi() {
+          console.log(Myclass);
+        }
+      }
+undefined*/
+        }
+      }; //함수표현식
+    </script>
+  </head>
+  <body></body>
+</html>
