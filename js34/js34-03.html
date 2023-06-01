@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스예제1</title>
+    <script>
+      class Rectangle {
+        constructor(width, height) {
+          this.width = width;
+          this.height = height; //받아들이는거 그대로 씀
+        }
+        getPerimeter() {
+          return 2 * (this.width + this.height);
+        } //둘레
+        getArea() {
+          return this.width * this.height;
+        } //넓이
+      }
+      const rec1 = new Rectangle(20, 10);
+      const rec2 = new Rectangle(30, 20);
+      console.log("rec1의 둘레:", rec1.getPerimeter()); //rec1의 둘레: 60
+      console.log("rec1의 넓이:", rec1.getArea()); //rec1의 넓이: 200
+      console.log("rec2의 둘레:", rec2.getPerimeter()); //rec2의 둘레: 100
+      console.log("rec2의 넓이:", rec2.getArea()); //rec2의 넓이: 600
+    </script>
+  </head>
+  <body></body>
+</html>
