@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>private속성 사용하기</title>
+    <script>
+      class Square {
+        #l; //class field 이 위치에 해당 속성을 private속성으로 사용하겠다고 선언
+
+        constructor(l) {
+          if (l <= 0) {
+            throw "길이는 0보다 커야 합니다.";
+          }
+          this.#l = l;
+        }
+        getPerimeter() {
+          return 4 * this.#l;
+        }
+        getArea() {
+          return this.#l * this.#l;
+        }
+      }
+      const square = new Square(10);
+      square.#l = -10; //Uncaught SyntaxError: Private field '#l' must be declared in an enclosing class (at js34-08.html:26:13)
+      console.log(`정사각형의 둘레: ${square.getPerimeter()}`);
+      console.log(`정사각형의 넓이: ${square.getArea()}`);
+    </script>
+  </head>
+  <body></body>
+</html>
