@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS정적 메소드2</title>
+    <script>
+      class Test2 {
+        static utillRandom(min, max) {
+          return Math.floor(Math.random() * (max - min)) + min; //값의 범위
+        }
+      }
+      console.log(Test2.utillRandom(12, 20));
+    </script>
+  </head>
+  <body></body>
+</html>
