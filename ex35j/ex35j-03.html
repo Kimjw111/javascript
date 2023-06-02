@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const user = {
+        name: "슈퍼맨",
+        age: 27,
+        get name() {
+          return user.name;
+        }, //가상으로 userName을 만듬
+        set name(value) {
+          user.name = value;
+        }, //set이 없으면 수정 불가 이름 중복불가
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
