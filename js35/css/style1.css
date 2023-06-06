@@ -32,3 +32,6 @@ color: white;
     justify-content: center;
     align-items: center;
 }
+.container #About{
+    background-color: red;
+}
