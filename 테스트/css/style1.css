@@ -1,0 +1,41 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    display: flex;
+    background-color: plum;
+    color: #ffffff;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    justify-content: space-around;
+}
+.main>div{
+    flex: 1;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+#home{
+    border-bottom: 3px solid yellowgreen;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    background-color: gray;
+    color: yellow;
+}
+tr, td{
+    border: 1px black solid;
+}
+.container{
+    width: 100%;
+    height: 80%;
+    border: 1px black dotted;
+    border-radius: 5px;
+    margin-top: 10px;
+}
