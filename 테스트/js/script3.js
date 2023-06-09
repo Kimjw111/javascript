@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded',()=>{
     const submit=document.getElementById('commit')
+    const arr1=JSON.parse(localStorage.getItem('input'))||[]
     let arr=[]
+    console.log(arr1)
         submit.addEventListener('click',()=>{
         const title=document.getElementById('title')
         const content=document.getElementById('content')
@@ -15,6 +17,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             alert('작성자를 입력해주세요.');
             name.focus();
           }else{
+            
              arr.push({제목:title.value,내용:content.value,작성자:name.value})
             localStorage.setItem('input',JSON.stringify(arr))
             title.value='';

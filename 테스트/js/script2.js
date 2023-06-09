@@ -8,4 +8,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     content.append(div1,div2,div3,div4,div5)
     let ct=1
 div1.innerHTML=ct++
+div2.innerHTML=JSON.parse(localStorage.getItem('input'))[0].제목
+div3.innerHTML=JSON.parse(localStorage.getItem('input'))[0].작성자
 })

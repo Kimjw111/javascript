@@ -37,3 +37,13 @@ margin-top: 5px;
 .container>table>tr,td{
     border: 1px solid black;
 }
+.content{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: brown;
+    color: white;
+}
+.content>div{
+ width: 20%;
+}
