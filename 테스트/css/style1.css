@@ -1,41 +1,43 @@
-html,body{
+html,
+body {
     width: 100%;
     height: 100%;
 }
-.main{
+
+.main {
     display: flex;
-    background-color: plum;
-    color: #ffffff;
     width: 100%;
     height: 10%;
-    align-items: center;
-    justify-content: space-around;
+    background-color: pink;
+    border-radius: 5px;
 }
-.main>div{
-    flex: 1;
+
+.main>div {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-right: 1px solid white;
+}
+
+.container {
     width: 100%;
     height: 80%;
+    margin-top: 10px;
+    border: 1px dotted black;
+    background-color: bisque;
+    border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: center
 }
-#home{
-    border-bottom: 3px solid yellowgreen;
+
+.container>h2 {
+    margin-left: 5px;
+    font-weight: 700;
 }
-table{
-    border-collapse: collapse;
-    width: 100%;
-    text-align: center;
-    background-color: gray;
-    color: yellow;
-}
-tr, td{
-    border: 1px black solid;
-}
-.container{
-    width: 100%;
-    height: 80%;
-    border: 1px black dotted;
-    border-radius: 5px;
-    margin-top: 10px;
+
+.container>h2:hover {
+    color: chocolate;
 }
