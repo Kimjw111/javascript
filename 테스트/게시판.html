@@ -39,6 +39,53 @@
         width: 50px;
         height: 50px;
       }
+      .content {
+        width: 100%;
+        height: 88%;
+        background: url(https://img.freepik.com/free-vector/watercolor-background-vector-in-blue-abstract-style_53876-126688.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 10px 0 0 5px;
+        border-radius: 5px;
+        padding-top: 5px;
+      }
+      .content > table {
+        border-collapse: collapse;
+        width: 100%;
+        height: 10%;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .content > tr,
+      td {
+        border: 1px solid black;
+        width: 20%;
+        color: chocolate;
+      }
+      td:hover {
+        animation: myani 3s infinite;
+      }
+      @keyframes myani {
+        0% {
+          color: orange;
+          background-color: grey;
+        }
+
+        25% {
+          color: yellow;
+          background-color: grey;
+        }
+
+        75% {
+          color: red;
+          background-color: grey;
+        }
+
+        100% {
+          color: pink;
+          background-color: grey;
+        }
+      }
     </style>
   </head>
   <body>
@@ -67,6 +114,17 @@
           />게시판</a
         >
       </div>
+    </div>
+    <div class="content">
+      <table>
+        <tr>
+          <td>글번호</td>
+          <td>제목</td>
+          <td>작성자</td>
+          <td>내용</td>
+          <td>일자</td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
