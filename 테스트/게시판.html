@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .main {
+        display: flex;
+        font-weight: 700;
+        margin: 5px 0;
+        border-radius: 5px;
+        width: 100%;
+        height: 10%;
+      }
+      .main > div {
+        margin-right: 5px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        border-radius: 5px;
+        border: 1px dotted black;
+        align-items: center;
+        justify-content: center;
+        background-color: aliceblue;
+      }
+      .main > div:hover {
+        background-color: grey;
+        color: yellow;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div id="home">
+        <a href="/테스트/메인화면.html">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/6490/6490332.png"
+            alt="home"
+          />메인</a
+        >
+      </div>
+      <div id="write">
+        <a href="/테스트/글쓰기.html"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/512/2071/2071353.png"
+            alt="write"
+          />글쓰기</a
+        >
+      </div>
+      <div id="board">
+        <a href="#">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2262/2262154.png"
+            alt="board"
+          />게시판</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
