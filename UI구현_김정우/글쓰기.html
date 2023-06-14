@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글쓰기</title>
+    <link rel="stylesheet" href="/UI구현_김정우/css/style2.css" />
+    <script src="/UI구현_김정우/js/script1.js"></script>
+  </head>
+  <body>
+    <header class="head">
+      <div id="home">
+        <a href="/UI구현_김정우/메인화면.html">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/6490/6490332.png"
+            alt="home"
+          />메인</a
+        >
+      </div>
+      <div id="write">
+        <a href="#"
+          ><img
+            src="https://cdn-icons-png.flaticon.com/512/2071/2071353.png"
+            alt="write"
+          />글쓰기</a
+        >
+      </div>
+      <div id="board">
+        <a href="/UI구현_김정우/게시판.html">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2262/2262154.png"
+            alt="board"
+          />게시판</a
+        >
+      </div>
+    </header>
+    <nav class="navi">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/5053/5053917.png"
+        alt="write"
+      />
+      <h2>게시글 작성</h2>
+    </nav>
+    <hr />
+    <main class="content">
+      <form action="#">
+        <label for="title">제목</label>
+        <input type="text" id="title" placeholder="제목을 입력하세요."
+        pattern="[가-힣0-9]{3}" / >
+        <br />
+        <label for="user">작성자</label>
+        <input
+          type="text"
+          id="user"
+          placeholder="작성자를 입력하세요."
+          pattern="[가-힣0-9a-zA-Z]{3}"
+        />
+        <br />
+        <label for="detail">내용</label>
+        <textarea
+          id="detail"
+          cols="30"
+          rows="10"
+          placeholder="내용을 입력하세요."
+        ></textarea>
+        <br />
+        <button id="up">등록</button>
+        <button type="submit">유효성검사</button>
+      </form>
+    </main>
+  </body>
+</html>
