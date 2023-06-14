@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const content = document.querySelector(".content");
     let arr = JSON.parse(localStorage.getItem("board")) ?? [];
     let a = 1;
+    const reset=document.getElementById('reset')
     for (let i = 0; i < arr.length; i++) {
       const boardList = document.createElement("div");
       const count = document.createElement("div");
@@ -18,4 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
       content.appendChild(boardList);
       boardList.append(count, title, name, main, date);
     }
+    reset.addEventListener('click',()=>{
+      localStorage.clear()
+      location.reload()
+    })
   });

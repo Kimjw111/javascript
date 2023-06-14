@@ -12,7 +12,7 @@
         margin: 5px 0;
         border-radius: 5px;
         width: 100%;
-        height: 10%;
+        height: 5%;
       }
       .head > div {
         margin-right: 5px;
@@ -31,18 +31,19 @@
         color: yellow;
       }
       img {
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
       }
       .content {
         width: 100%;
-        height: 88%;
+        height: 90%;
         background: url(https://img.freepik.com/free-vector/watercolor-background-vector-in-blue-abstract-style_53876-126688.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        margin: 10px 0 0 5px;
+       margin-top: 5px;
         border-radius: 5px;
         padding-top: 5px;
+        color: fuchsia;
       }
       .content > table {
         border-collapse: collapse;
@@ -93,4 +94,43 @@
         border-radius: 5px;
         margin: 3px;
         text-align: center;
+      }
+      footer{
+        width: 100%;
+        height: 3%;
+      }
+      footer>div{
+        height: 100%;
+        width: 100%;
+        margin-top: 5px;
+        border: 1px solid black;
+        background-color: beige;
+        border-radius: 5px;
+      }
+      footer>div>button{
+        border: 1px solid red;
+        background-color: grey;
+        color: yellow;
+      }
+      footer>div>button:hover{
+        background-color: black;
+        color: red;
+        animation: myframe 3s infinite;
+      }
+      @keyframes myframe{
+        0% {
+          color: red;   
+        }
+
+        25% {
+          color: orange;
+        }
+
+        75% {
+          color: yellow
+        }
+
+        100% {
+          color: red;
+        }
       }
