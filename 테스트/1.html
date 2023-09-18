@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function color() {
+        const colors = ["red", "green", "yellow", "blue", "orange"];
+        const lis = document.querySelectorAll("li");
+        for (let i = 0; i < lis.length; i++) {
+          lis[i].style.backgroundColor = colors[i];
+          lis[i].style.color = "white";
+          if (i == 2) {
+            lis[i].style.color = "black";
+          }
+        }
+      }
+    </script>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      header {
+        margin-bottom: 10px;
+        background-color: chocolate;
+        width: 100%;
+        height: 10%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+      }
+      nav {
+        background-color: rgb(238, 144, 160);
+        width: 100%;
+        height: 3%;
+        border-radius: 15px;
+        text-align: center;
+        color: yellow;
+      }
+      main {
+        width: 100%;
+        height: 77%;
+        border-radius: 15px;
+        background: antiquewhite;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      main > span {
+        margin-top: 10px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        flex: 1;
+        text-align: center;
+        background-color: cadetblue;
+        color: white;
+        border-radius: 15px;
+      }
+      td,
+      th {
+        border: 1px solid;
+        border-radius: 15px;
+      }
+      ul > li {
+        list-style-type: none;
+        margin: 10px;
+        padding: 10px;
+        font-weight: bold;
+        border: 1px solid blue;
+        border-radius: 15px;
+        color: grey;
+      }
+      li:hover {
+        cursor: pointer;
+      }
+      main > button {
+        width: 65px;
+        height: 40px;
+        position: relative;
+        left: 48%;
+      }
+      footer {
+        text-align: center;
+        background-color: burlywood;
+        border-radius: 15px;
+        width: 100%;
+        height: 5%;
+        position: absolute;
+        bottom: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>사이트</h1>
+    </header>
+    <nav>
+      <span>뭘까요?</span>
+    </nav>
+    <main>
+      <span>모르겟네요</span>
+      <br />
+      <table>
+        <tr>
+          <th>제목1</th>
+          <th>제목2</th>
+          <th>제목3</th>
+        </tr>
+        <tr>
+          <td>내용1</td>
+          <td>내용2</td>
+          <td>내용3</td>
+        </tr>
+        <tr>
+          <td>1-1</td>
+          <td>2-1</td>
+          <td>3-1</td>
+        </tr>
+      </table>
+      <ul>
+        <li>1. 사이트</li>
+        <li>2. 사이트</li>
+        <li>3. 사이트</li>
+        <li>4. 사이트</li>
+        <li>5. 사이트</li>
+      </ul>
+      <button onclick="color()">이래도 안눌러?</button>
+    </main>
+    <footer>
+      <p>광고주세요</p>
+    </footer>
+  </body>
+</html>
